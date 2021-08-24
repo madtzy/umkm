@@ -1,0 +1,110 @@
+:root{
+    --maincolor :#2B2B2B;
+    --seconcolor : #FFA500;
+
+}
+body{
+    font-family: 'Poppins', sans-serif;
+  }
+/* USER */
+/* sidebar user*/
+.nav-abu{
+    background-color: var(--maincolor) !important;
+    z-index: 10;
+    transition: 1s;
+}
+.nav-item:hover{
+    text-decoration: underline;
+    transform: scale(1.05);  
+}
+.navbar-toggler{
+    display: inline-block;
+    background: white;
+}
+.navbar-toggler-icon{
+    background: white;
+}
+.navbar-brand, .logo{
+    color: var(--seconcolor) !important;
+}
+
+/* card */
+.detail_warung{
+    margin-top: 50px;
+}
+.card{
+    overflow: hidden;
+}
+.card:hover{
+	box-shadow: 2px 2px 2px rgba(0, 0, 0,0.5);
+}
+.gambar:hover{
+    transform: scale(1.03);  
+}
+/* button */
+.join{
+    border-radius: 10px;  
+}
+.join:hover{
+    background-color: blue;
+    transform: scale(1.05);
+}
+.beli{
+    border-radius: 10px;  
+}
+.beli:hover{
+    background-color: blue;
+    transform: scale(1.02);
+}
+.detail_wrg{
+    border-radius: 10px;  
+}
+.detail_wrg:hover{
+    background-color:green;
+    transform: scale(1.02);
+}
+.masuk_wrg{
+    border-radius: 10px;  
+}
+.masuk_wrg:hover{
+    background-color: blue;
+    transform: scale(1.02);
+}
+.checkout:hover{
+    background-color: blue;
+    transform: scale(1.02);
+}
+.next_join:hover{
+    background-color: blue;
+    transform: scale(1.02);
+}
+.kembali:hover{
+    background-color: red;
+    transform: scale(1.02);
+}
+/* footer */
+#content {
+	line-height: 25px;
+    margin-top: 10px;
+}
+
+#content a {
+	text-decoration: none;
+}
+
+#content a:hover {
+	text-decoration: underline;
+}
+
+.footer .container .row .col a {
+	text-decoration: none;
+}
+
+#sosmed .bx {
+	transition: .3s;
+    text-decoration: none;
+}
+
+#sosmed .bx:hover {
+	color: #6C757D;
+}

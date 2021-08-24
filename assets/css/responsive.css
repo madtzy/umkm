@@ -1,0 +1,319 @@
+/* HP */
+@media(min-width:320px){
+    .navbar-brand{
+        font-family: 'Merriweather', serif;        
+        font-size: 14px;
+    }
+    .navbar-toggler{
+        font-size: 12px;
+    }
+    ul li a{
+        font-size: 13px;
+        margin-top: -3px;
+    }
+    .join{
+        font-size: 60%;
+        width: 100%;
+    }
+    .nav-item:hover{
+        background-color: rgba(165, 165, 165, 0.5);
+        text-decoration: underline; 
+    }
+    .carousel-item{
+        max-height: fit-content;
+    }
+    .carousel-item img{
+        height: 230px;
+    }
+    .judul{
+        font-family: 'Merriweather', serif;
+        font-size: 16px;
+    }
+    .judul:hover{
+        transform: scale(1.08);  
+    }
+    .search{
+        width: 100%;
+        margin-top: 5px;
+        margin-bottom: -10px;
+    }
+    .btn-search{
+        font-size: 12px;
+        margin-top: 5px;
+        margin-bottom: -10px;
+    }
+    .card{
+        width: auto;
+        height: auto;
+    }
+    .card img{
+        height: 200px;
+    }
+    /* footer */
+    #content {
+        font-size: 12px;
+    }
+    #judul {
+        font-size: 13px;
+    }
+    #copyright {
+        text-align: center;
+        font-size: 11px;
+    }
+    #sosmed {
+        text-align: center;
+        font-size: 12px;
+        margin-top: 5px;
+    }
+}
+/* HP Landscape */
+@media(min-width:576px){
+    .navbar-brand{
+        font-family: 'Merriweather', serif;
+        font-size: 17px;
+    }
+    .navbar-toggler{
+        font-size: 15px;
+    }
+    ul li a{
+        font-size: 14px;
+    }
+    .join{
+        font-size: 80%;
+        width: 100%;
+    }
+    .nav-item:hover{
+        background-color: rgba(165, 165, 165, 0.5);
+        text-decoration: underline; 
+    }
+    .carousel-item{
+        max-height: fit-content;
+    }
+    .carousel-item img{
+        height: 220px;
+    }
+    .judul{
+        font-family: 'Merriweather', serif;
+        font-size: 16px;
+    }
+    .judul:hover{
+        transform: scale(1.08);  
+    }
+    .search{
+        width: 35%;
+        margin-top: 5px;
+        margin-bottom: -5px;
+    }
+    .btn-search{
+        height: fit-content;
+        font-size: 12px;
+        margin-top: 5px;
+        margin-bottom: -5px;
+    }
+    .card{
+        width: auto;
+        height: auto;
+    }
+    /* footer */
+    #content {
+    	font-size: 12px;
+    }
+
+    #judul {
+    	font-size: 13px;
+    }
+
+    #copyright {
+    	font-size: 12px;
+    	text-align: start;
+    }
+
+    #sosmed {
+        text-align: end;
+    	font-size: 13px;
+    }
+}
+/* Tablet */
+@media(min-width:768px){
+    .navbar-brand{
+        font-family: 'Merriweather', serif;
+        font-size: 19px;
+    }
+    ul li a{
+        font-size: 16px;
+    }
+    .join{
+        font-size: 100%;
+        width: 100%;
+    }
+    .nav-item:hover{
+        background-color: rgba(165, 165, 165, 0.5);
+        text-decoration: underline; 
+    }
+    .navbar-toggler{
+        font-size: 17px;
+    }
+    .carousel-item{
+        max-height: fit-content;
+    }
+    .carousel-item img{
+        height: 290px;
+    }
+    .judul{
+        font-family: 'Merriweather', serif;
+        font-size: 16px;
+        margin-bottom: 40px;
+    }
+    .judul:hover{
+        transform: scale(1.08);  
+    }
+    .search{
+        width: 35%;
+        margin-top: -28px;
+        margin-bottom: -10px;
+    }
+    .btn-search{
+        height: fit-content;
+        font-size: 12px;
+        margin-top: -25px;
+        margin-bottom: -10px;
+    }
+    .card{
+        width: auto;
+        height: auto;
+    }
+    .card img{
+        height: 130px;
+    }
+    .badge{
+        font-size: 10px;
+    }
+    /* footer */
+    #content {
+       	font-size: 15px;
+    }
+    #judul {
+    	font-size: 16px;
+    }
+    #copyright {
+        text-align: start;
+    	font-size: 14px;
+    }
+    #sosmed {
+        text-align: end;
+    	font-size: 15px;
+    }
+}
+
+/* Dekstop */
+@media(min-width:992px){
+    .navbar-brand{
+        font-family: 'Merriweather', serif;
+        font-size: 16px;
+    }
+    ul li a{
+        font-size: 14px;
+    }
+    .join{
+        font-size: 70%;
+    }
+    .nav-item:hover{
+        text-decoration: underline;
+        transform: scale(1.05);  
+    }
+    .carousel-item{
+        max-height: fit-content;
+    }
+    .carousel-item img{
+        height: 290px;
+    }
+    .judul{
+        font-family: 'Merriweather', serif;
+        font-size: 15px;
+        margin-bottom: 35px;
+    }
+    .judul:hover{
+        transform: scale(1.08);  
+    }
+    .search{
+        width: 35%;
+        height: fit-content;
+        margin-top: -25px;
+        margin-bottom: -10px;
+    }
+    .btn-search{
+        height: fit-content;
+        font-size: 12px;
+        margin-top: -22px;
+        margin-bottom: -10px;
+    }
+    .card{
+        width: auto;
+        height: auto;
+    }
+        /* footer */
+    #content{
+        font-size: 15px;
+    }
+    #judul{
+    	font-size: 16px;
+    }
+    #copyright{
+        text-align: start;
+    	font-size: 14px;
+    }
+    #sosmed .bx{
+        text-align: end;
+        font-size: 15px;
+    }
+}
+/* XL Dekstop */
+@media(min-width:1200px){
+    .navbar-brand{
+        font-family: 'Merriweather', serif;
+        font-size: 20px;
+    }
+    ul li a{
+        font-size: 18px;
+    }
+    .join{
+        font-size: 90%;
+    }
+    .nav-item:hover{
+        text-decoration: underline;
+        transform: scale(1.05);  
+    }
+    .carousel-item{
+        max-height: fit-content;
+    }
+    .carousel-item img{
+        height: 380px;
+    }
+    .judul{
+        font-family: 'Merriweather', serif;
+        font-size: 19px;
+        margin-bottom: 35px;
+    }
+    .judul:hover{
+        transform: scale(1.08);  
+    }
+    .search{
+        width: 35%;
+        height: fit-content;
+        margin-top: -25px;
+        margin-bottom: -10px;
+    }
+    .btn-search{
+        height: fit-content;
+        font-size: 14px;
+        margin-top: -23px;
+        margin-bottom: -10px;
+    }
+    .card{
+        width: auto;
+        height: auto;
+    }
+    .card img{
+        height: 150px;
+    }
+}
