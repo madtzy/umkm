@@ -9,6 +9,7 @@
 				<th>Alamat</th>
 				<th>No. Telp</th>
 				<th>Jumlah Order</th>
+				<th>Total Bayar</th>
 				<th class="text-center">Aksi</th>
 			</tr>
 		</thead>
@@ -24,6 +25,7 @@
 					<td><?php echo $his->f_alamat ?></td>
 					<td><?php echo $his->f_no_telp ?></td>
 					<td><?php echo $his->f_jumlah_order ?></td>
+					<td>Rp. <?php echo number_format($his->f_total_bayar, 0, ',', '.'); ?></td>
 					<td class="text-center">
 						<button class="btn btn-sm btn-success" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Detail History"><?php echo anchor('admin/data_history/detail/' . $his->f_id_pembeli, '<i class="fas fa-search-plus text-white"></i>') ?></button>
 					</td>

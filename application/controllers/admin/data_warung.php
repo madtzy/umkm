@@ -42,10 +42,12 @@
 				$nama_warung 	= $this->input->post('f_nama_warung');
 				$alamat 		= $this->input->post('f_alamat');
 				$no_telp 	    = $this->input->post('f_no_telp');
+
 				$gambar 		= $_FILES['f_gambar']['name'];
 				if ($gambar = ''){}else{
 					$config ['upload_path'] = './uploads/warung';
 					$config ['allowed_types'] = 'jpg|jpeg|png|gif';
+					$config['remove_spaces'] = TRUE;
 
 					$this->load->library('upload', $config);
 					if(!$this->upload->do_upload('f_gambar')){

@@ -47,6 +47,7 @@
 				if ($gambar = ''){}else{
 					$config ['upload_path'] = './uploads/makanan';
 					$config ['allowed_types'] = 'jpg|jpeg|png|gif';
+					$config['remove_spaces'] = TRUE;
 
 					$this->load->library('upload', $config);
 					if(!$this->upload->do_upload('f_gambar')){

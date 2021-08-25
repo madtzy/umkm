@@ -4,7 +4,7 @@
 		</h4>
 		<table class="table table-bordered table-hover table-striped">
 			<tr class="text-center">
-				<th>NO MAKANAN</th>
+				<th>ID MAKANAN</th>
 				<th>NAMA MAKANAN</th>
 				<th>HARGA</th>
 				<th>NAMA WARUNG</th>
