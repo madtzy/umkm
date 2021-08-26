@@ -45,7 +45,7 @@
                 <a class="text-secondary" href="https://t.me/madtzy07">Telegram</a>
               </div>
               <div>
-                <i class="bx bxl-messenger me-1"></i> <a class="text-secondary" href="https://web.facebook.com/messages/t/100027586307909">Messenger</a>
+                <i class="bx bxl-messenger me-1"></i> <a class="text-secondary" href="https://web.facebook.com/messages/t/100072188437967">Messenger</a>
               </div>
             </div>
           </div>
@@ -58,7 +58,7 @@
         <div class="row">
           <div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-xs-12 text-white" id="copyright">Copyright &copy; 2021 All Rights Reserved by-UMKM</div>
           <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-xs-12" id="sosmed">
-            <a class="text-decoration-none text-white me-2" data-bs-toggle="tooltip" data-bs-placement="bottom" target="blank" title="Facebook" href="https://web.facebook.com/profile.php?id=100027586307909">
+            <a class="text-decoration-none text-white me-2" data-bs-toggle="tooltip" data-bs-placement="bottom" target="blank" title="Facebook" href="https://web.facebook.com/profile.php?id=100072188437967">
               <i class="bx bxl-facebook"></i>
             </a>
             <a class="text-decoration-none text-white me-2" data-bs-toggle="tooltip" data-bs-placement="bottom" target="blank" title="Instagram" href="https://www.instagram.com/_madmamad_/">
