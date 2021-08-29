@@ -23,7 +23,7 @@
 		public function detail($id_pembeli)
 		{
 			$data['history'] = $this->model_history->ambil_id_pembeli($id_pembeli);
-			$data['pesan'] = $this->model_history->ambil_id_pesanan($id_pembeli);
+			$data['pesanan'] = $this->model_history->ambil_id_pesanan($id_pembeli);
 			$data['title'] = 'Detail History';
 			$this->load->view('templates_admin/header', $data);
 			$this->load->view('templates_admin/sidebar');

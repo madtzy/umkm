@@ -20,6 +20,7 @@
 		public function tambah_pembeli()
 		{
 			date_default_timezone_set('Asia/Jakarta');
+			$id_makanan    	= $this->input->post('f_id_makanan'); 
 			$nama_pembeli 	= $this->input->post('f_nama_pembeli');
 			$alamat			= $this->input->post('f_alamat');
 			$no_telp		= $this->input->post('f_no_telp');
@@ -30,6 +31,7 @@
 			$harga 		= $this->input->post('f_harga');
 
 			$data = array (
+				'f_id_makanan'		=>$id_makanan,
 				'f_nama_pembeli'	=>$nama_pembeli,
 				'f_alamat'			=>$alamat,
 				'f_tanggal'			=>date('Y-m-d H:i:s'),

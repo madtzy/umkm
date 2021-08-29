@@ -164,7 +164,11 @@ a {
 }
 .footer-detail{
 	position: relative;
-	margin-top: 380px;
+	margin-top: 370px;
+}
+.footer-detail-history{
+	position: relative;
+	margin-top: 45px;
 }
 .footer-edit{
 	position: relative;

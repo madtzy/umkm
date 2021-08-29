@@ -10,7 +10,7 @@
         <div>
             <li class="backgorund_logo">
                 <a href="#" class="nav__logo">
-                    <span class="nav__logo-name fw-bold fs-5"><i class="bx bx-store-alt bx-tada nav__logo-icon me-2"></i>Admin | UMKM</span>
+                    <span class="nav__logo-name fw-bold fs-5"><i class="bx bx-restaurant bx-tada nav__logo-icon me-2"></i>Admin | UMKM</span>
                 </a>
             </li>
             <div class="nav__list">

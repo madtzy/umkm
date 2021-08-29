@@ -1,32 +1,33 @@
 <div class="margin">
 	<div class="container-fluid">
-		<h4>Detail History <div class="btn btn-sm btn-success">No. Pembeli : <?php echo $history->f_id_pembeli ?></div>
-		</h4>
-		<table class="table table-bordered table-hover table-striped">
-			<tr class="text-center">
-				<th>ID MAKANAN</th>
-				<th>NAMA MAKANAN</th>
-				<th>HARGA</th>
-				<th>NAMA WARUNG</th>
+		<h4>Detail History<div class="btn btn-sm btn-success ms-2">No. Pembeli : <?php echo $history->f_id_pembeli ?></div></h4>
+		<table id="table" class="table table-dark table-striped" style="width:100%">
+		<thead>
+			<tr>
+				<th>Id Makanan</th>
+				<th>Nama Makanan</th>
+				<th>Harga</th>
+				<th>Nama Warung</th>
 			</tr>
-			<?php foreach ($pesan as $psn) : ?>
+		</thead>
+		<tbody>
+			<?php foreach ($pesanan as $pesan) : ?>
 				<tr>
-					<td><?php echo $psn->f_id_makanan ?></td>
-					<td><?php echo $psn->f_nama_makanan ?></td>
-					<td>Rp. <?php echo number_format($psn->f_harga, 0, ',', '.') ?></td>
-					<td><?php echo $psn->f_nama_warung ?></td>
+					<td><?php echo $pesan->f_id_makanan ?></td>
+					<td><?php echo $pesan->f_nama_makanan ?></td>
+					<td>Rp. <?php echo number_format($pesan->f_harga,0,',','.') ?></td>
+					<td><?php echo $pesan->f_nama_warung ?></td>
 				</tr>
 			<?php endforeach; ?>
+		</tbody>
 		</table>
 		<a href="<?php echo base_url('admin/data_history/index') ?>">
 			<div class="btn btn-sm btn-primary">Kembali</div>
 		</a>
 	</div>
 </div>
-<footer class="bg-white mt-3">
-	<div class="container my-auto">
-		<div class="copyright text-center my-auto">
-			<span>Copyright &copy; 2021 All Rights Reserved by-UMKM</span>
-		</div>
+<footer class="footer-detail-history bg-white">
+	<div class="copyright text-center">
+		<span>Copyright &copy; 2021 All Rights Reserved by-UMKM</span>
 	</div>
 </footer>

@@ -17,7 +17,7 @@
     }
     .nav-item:hover{
         background-color: rgba(165, 165, 165, 0.5);
-        text-decoration: underline; 
+        text-decoration: none; 
     }
     .carousel-item{
         max-height: fit-content;
@@ -84,7 +84,7 @@
     }
     .nav-item:hover{
         background-color: rgba(165, 165, 165, 0.5);
-        text-decoration: underline; 
+        text-decoration: none; 
     }
     .carousel-item{
         max-height: fit-content;
@@ -107,7 +107,7 @@
     .btn-search{
         height: fit-content;
         font-size: 12px;
-        margin-top: 5px;
+        margin-top: 8px;
         margin-bottom: -5px;
     }
     .card{
@@ -148,7 +148,7 @@
     }
     .nav-item:hover{
         background-color: rgba(165, 165, 165, 0.5);
-        text-decoration: underline; 
+        text-decoration: none; 
     }
     .navbar-toggler{
         font-size: 17px;

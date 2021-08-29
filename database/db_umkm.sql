@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 26, 2021 at 10:28 PM
+-- Generation Time: Aug 29, 2021 at 08:52 AM
 -- Server version: 10.3.15-MariaDB
 -- PHP Version: 7.3.6
 
@@ -61,9 +61,7 @@ CREATE TABLE `tb_join` (
 --
 
 INSERT INTO `tb_join` (`f_id_join`, `f_nama`, `f_nama_warung`, `f_alamat_warung`, `f_no_telp_warung`) VALUES
-(2, 'Naufal Hibatulloh', 'Warung Mantap', 'Jl. Imam Bonjol No.5', '+6285736453532'),
-(4, 'admin', 'Warung Bu Jus', 'Jl. Imam Bonjol No.5', '+6285736453532'),
-(5, 'qq', 'qsq', 'qs', 'wsw');
+(1, 'zaki', 'warung zaki', 'jl gusdur', '085965856547');
 
 -- --------------------------------------------------------
 
@@ -111,6 +109,7 @@ INSERT INTO `tb_makanan` (`f_id_makanan`, `f_nama_makanan`, `f_harga`, `f_nama_w
 
 CREATE TABLE `tb_pembeli` (
   `f_id_pembeli` int(11) NOT NULL,
+  `f_id_makanan` int(11) NOT NULL,
   `f_nama_pembeli` varchar(50) NOT NULL,
   `f_tanggal` datetime NOT NULL,
   `f_alamat` varchar(200) NOT NULL,
@@ -123,8 +122,8 @@ CREATE TABLE `tb_pembeli` (
 -- Dumping data for table `tb_pembeli`
 --
 
-INSERT INTO `tb_pembeli` (`f_id_pembeli`, `f_nama_pembeli`, `f_tanggal`, `f_alamat`, `f_no_telp`, `f_jumlah_order`, `f_total_bayar`) VALUES
-(24, 'mamad', '2021-08-25 12:13:38', 'wirogunan', '089519876677', 2, 30000);
+INSERT INTO `tb_pembeli` (`f_id_pembeli`, `f_id_makanan`, `f_nama_pembeli`, `f_tanggal`, `f_alamat`, `f_no_telp`, `f_jumlah_order`, `f_total_bayar`) VALUES
+(1, 21, 'dedy', '2021-08-29 10:47:24', 'palembang', '0859564524235', 2, 30000);
 
 -- --------------------------------------------------------
 
@@ -197,7 +196,7 @@ ALTER TABLE `tb_admin`
 -- AUTO_INCREMENT for table `tb_join`
 --
 ALTER TABLE `tb_join`
-  MODIFY `f_id_join` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `f_id_join` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `tb_makanan`
@@ -209,13 +208,13 @@ ALTER TABLE `tb_makanan`
 -- AUTO_INCREMENT for table `tb_pembeli`
 --
 ALTER TABLE `tb_pembeli`
-  MODIFY `f_id_pembeli` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `f_id_pembeli` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `tb_warung`
 --
 ALTER TABLE `tb_warung`
-  MODIFY `f_id_warung` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `f_id_warung` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -1,12 +1,12 @@
 // navbar scroll
 const nav = document.getElementById('nav');
 
-window.addEventListener('scroll', function() {
+window.addEventListener('scroll', function () {
     scrollposition = window.scrollY;
 
-    if(scrollposition >=60) {
+    if (scrollposition >= 305) {
         nav.classList.add('nav-abu')
-    }else if(scrollposition <=60){
+    } else if (scrollposition <= 305) {
         nav.classList.remove('nav-abu')
     }
 })

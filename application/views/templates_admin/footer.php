@@ -18,9 +18,8 @@
         <script>
             $(document).ready(function() {
                 $('#table').DataTable({
-                    "sScrollY": ($(window).height() - 460),
+                    "sScrollY": ($(window).height() - 420),
                     dom: 'Bfrtip',
-                    // buttons: ['print', 'csv', 'excel', 'pdf', 'colvis']
                     buttons: [{
                             extend: 'print',
                             exportOptions: {
