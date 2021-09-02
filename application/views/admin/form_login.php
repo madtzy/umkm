@@ -1,7 +1,7 @@
 <div class="container-fluid">
     <!-- Outer Row -->
     <div class="row justify-content-center">
-        <div class="col-5">
+        <div class="col-xl-5 col-lg-6">
             <div class=" card o-hidden my-5">
                 <div class="card-body">
                     <div class="p-5">

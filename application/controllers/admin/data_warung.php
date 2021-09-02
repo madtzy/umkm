@@ -5,7 +5,7 @@
 		{
 			parent::__construct();
 			if(!$this->session->userdata('f_username')){
-				$this->session->set_flashdata('pesan','<div class="alert small alert-danger alert-dismissible fade show" role="alert">
+				$this->session->set_flashdata('pesan','<div class="alert small alert-danger alert-dismissible" role="alert">
 					  Anda Belum Login!
 					  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 					</div>');

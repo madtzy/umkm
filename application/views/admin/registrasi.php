@@ -1,7 +1,7 @@
  <div class="container-fluid">
     <!-- Outer Row -->
     <div class="row justify-content-center">
-        <div class="col-5">
+        <div class="col-xl-5 col-lg-6">
             <div class=" card o-hidden my-5">
                 <div class="card-body">
                     <div class="p-5">
@@ -25,14 +25,14 @@
                                     <?php echo form_error('f_username', '<div class="text-danger small">','</div>') ?>
                                 </div>
                                 <div class="form-group row mt-3">
-                                    <div class="col-md-6">
+                                    <div class="col-xl-6 col-lg-6">
                                         <div class="input-group">
                                             <div class="input-group-text"><i class="fas fa-key"></i></div>
                                             <input type="password" class="form-control" name="f_password_1" placeholder="Password">
                                         </div>  
                                         <?php echo form_error('f_password_1', '<div class="text-danger small">','</div>') ?>
                                     </div>
-                                    <div class="col-sm-6">
+                                    <div class="col-xl-6 col-lg-6">
                                         <div class="input-group">
                                             <div class="input-group-text"><i class="fas fa-key"></i></div>
                                             <input type="password" class="form-control" name="f_password_2" placeholder="Ulangi Password">
@@ -40,7 +40,7 @@
                                 </div>
                             </div>
                             <div class="text-center">
-                                <button type="submit" class="btn btn-primary mt-4">Daftar</button>
+                                <button type="submit" class="btn btn-primary mt-4">Register</button>
                             </div> 
                         </form>
                         <hr>

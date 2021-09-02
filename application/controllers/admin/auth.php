@@ -19,9 +19,9 @@
 				$auth = $this->model_auth->cek_login();
 				if($auth == FALSE)
 				{
-					$this->session->set_flashdata('pesan','<div class="alert alert-danger alert-dismissible fade show" role="alert">
+					$this->session->set_flashdata('pesan','<div class="alert alert-danger alert-dismissible" role="alert">
 					  Username atau Password Anda Salah!
-					  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+					  <button class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 					</div>');
 					redirect('admin/auth/login');
 				}else{

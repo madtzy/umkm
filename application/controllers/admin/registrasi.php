@@ -3,7 +3,7 @@
         public function daftar()
         {
             $this->form_validation->set_rules('f_nama','Nama','required',array('required' => 'Nama Wajib Diisi!'));
-            $this->form_validation->set_rules('f_username','Username','required',array('required' => 'Username Wajib Diisi!'));
+            $this->form_validation->set_rules('f_username','Username','required|is_unique[tb_admin.f_username]',array('required' => 'Username Wajib Diisi!','is_unique' => 'Username Sudah Ada!'));
             $this->form_validation->set_rules('f_password_1','Password','required|min_length[6]|matches[f_password_2]',
                 array(
                         'required' => 'Password Wajib Diisi!',
