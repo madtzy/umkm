@@ -10,6 +10,10 @@
 						<div class="col-md-9">
 							<table class="table">
 								<tr>
+									<td>Id Makanan</td>
+									<td><strong><?php echo $makan->f_id_makanan ?></strong></td>
+								</tr>
+								<tr>
 									<td>Nama Makanan</td>
 									<td><strong><?php echo $makan->f_nama_makanan ?></strong></td>
 								</tr>

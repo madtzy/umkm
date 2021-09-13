@@ -41,7 +41,7 @@
 	</div>
 	<footer class="bg-white mt-3">
 		<div class="copyright text-center">
-			<span>Copyright &copy; 2021 All Rights Reserved by-UMKM</span>
+			<span>Copyright &copy; 2021 All Rights Reserved by UMKM Makanan</span>
 		</div>
 	</footer>
 
@@ -58,17 +58,17 @@
 					<form action="<?php echo base_url() . 'admin/data_makanan/tambah_aksi' ?>" method="post" enctype="multipart/form-data">
 						<div class="form-group">
 							<label for="makanan">Nama Makanan</label>
-							<input type="text" id="makanan" name="f_nama_makanan" class="form-control" value="<?php echo set_value('f_nama_makanan') ?>">
+							<input type="text" id="makanan" name="f_nama_makanan" class="form-control">
 						</div>
 						<?php echo form_error('f_nama_makanan', '<div class="text-danger small">', '</div>') ?>
 						<div class="form-group mt-2">
 							<label for="harga">Harga</label>
-							<input type="number" id="harga" name="f_harga" class="form-control" value="<?php echo set_value('f_harga') ?>">
+							<input type="number" id="harga" name="f_harga" class="form-control">
 						</div>
 						<?php echo form_error('f_harga', '<div class="text-danger small">', '</div>') ?>
 						<div class="form-group mt-2">
 							<label for="warung">Nama Warung</label>
-							<input type="text" id="warung" name="f_nama_warung" class="form-control" value="<?php echo set_value('f_nama_warung') ?>">
+							<input type="text" id="warung" name="f_nama_warung" class="form-control">
 						</div>
 						<?php echo form_error('f_nama_warung', '<div class="text-danger small">', '</div>') ?>
 						<div class="form-group mt-2">

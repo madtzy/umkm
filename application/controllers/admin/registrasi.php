@@ -28,7 +28,10 @@
                 );
 
                 $this->db->insert('tb_admin', $data);
-                $this->session->set_flashdata('berhasil','<div class="alert alert-success" role="alert">Selamat Akun Anda Terdaftar. Silahkan Login</div>');
+                $this->session->set_flashdata('berhasil','<div class="alert alert-success alert-dismissible" role="alert">
+                Selamat Akun Anda Terdaftar. Silahkan Login 
+                <button class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>');
                 redirect('admin/auth/login');
             }
             

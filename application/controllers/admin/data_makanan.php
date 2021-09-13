@@ -33,7 +33,10 @@
 			if ($this->form_validation->run() == FALSE)
 			{
 				$data['makanan'] = $this->model_makanan->tampil_data()->result();
-				$this->session->set_flashdata('gagal_tambah','<div class="alert alert-danger" role="alert">Data Gagal Ditambahkan</div>');
+				$this->session->set_flashdata('gagal_tambah','<div class="alert alert-danger alert-dismissible" role="alert">
+				Data Gagal Ditambahkan 
+				<button class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+				</div>');
 				$data['title'] = 'Data Makanan';
 				$this->load->view('templates_admin/header', $data);
 				$this->load->view('templates_admin/sidebar');
@@ -65,7 +68,10 @@
 				);
 	
 				$this->model_makanan->tambah_makanan($data, 'tb_makanan');
-				$this->session->set_flashdata('berhasil_tambah','<div class="alert alert-success" role="alert">Data Berhasil Ditambahkan</div>');
+				$this->session->set_flashdata('berhasil_tambah','<div class="alert alert-success alert-dismissible" role="alert">
+				Data Berhasil Ditambahkan 
+				<button class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+				</div>');
 				redirect('admin/data_makanan/index');
 				}
 		}
@@ -91,7 +97,10 @@
 			if ($this->form_validation->run() == FALSE)
 			{
 				$data['makanan'] = $this->model_makanan->tampil_data()->result();
-				$this->session->set_flashdata('gagal_update','<div class="alert alert-danger" role="alert">Data Gagal Diupdate</div>');
+				$this->session->set_flashdata('gagal_update','<div class="alert alert-danger alert-dismissible" role="alert">
+				Data Gagal Diupdate
+				<button class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+				</div>');
 				$data['title'] = 'Data Makanan';
 				$this->load->view('templates_admin/header', $data);
 				$this->load->view('templates_admin/sidebar');
@@ -103,7 +112,7 @@
 				$harga			= $this->input->post('f_harga');
 				$nama_warung    = $this->input->post('f_nama_warung');
 				
-
+				
 				$data = array (
 					'f_nama_makanan'	=>$nama_makanan,
 					'f_harga'			=>$harga,
@@ -116,7 +125,10 @@
 				);
 
 				$this->model_makanan->update_data($where,$data,'tb_makanan');
-				$this->session->set_flashdata('berhasil_update','<div class="alert alert-success" role="alert">Data Berhasil Diupdate</div>');
+				$this->session->set_flashdata('berhasil_update','<div class="alert alert-success alert-dismissible" role="alert">
+				Data Berhasil Diupdate 
+				<button class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+				</div>');
 				redirect('admin/data_makanan/index');
 			}
 		}

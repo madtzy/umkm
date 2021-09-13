@@ -34,7 +34,7 @@
 	</div>
 	<footer class="bg-white mt-5 pt-3">
 		<div class="copyright text-center">
-			<span>Copyright &copy; 2021 All Rights Reserved by-UMKM</span>
+			<span>Copyright &copy; 2021 All Rights Reserved by UMKM Makanan</span>
 		</div>
 	</footer>
 

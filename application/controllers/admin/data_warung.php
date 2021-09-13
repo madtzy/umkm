@@ -32,7 +32,10 @@
 			if ($this->form_validation->run() == FALSE)
 			{
 				$data['warung'] = $this->model_warung->tampil_data()->result();
-				$this->session->set_flashdata('gagal','<div class="alert alert-danger" role="alert">Data Gagal Ditambahkan</div>');
+				$this->session->set_flashdata('gagal','<div class="alert alert-danger alert-dismissible" role="alert">
+				Data Gagal Ditambahkan 
+				<button class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+				</div>');
 				$data['title'] = 'Data Warung';
 				$this->load->view('templates_admin/header', $data);
 				$this->load->view('templates_admin/sidebar');
@@ -64,7 +67,10 @@
 
 				);
 				$this->model_warung->tambah_warung($data, 'tb_warung');
-				$this->session->set_flashdata('berhasil','<div class="alert alert-success" role="alert">Data Berhasil Ditambahkan</div>');
+				$this->session->set_flashdata('berhasil','<div class="alert alert-success alert-dismissible" role="alert">
+				Data Berhasil Ditambahkan 
+				<button class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+				</div>');
 				redirect('admin/data_warung/index');
 				}
 		}
@@ -83,14 +89,17 @@
 		}
 
 		public function update()
-		{
+		{	
 			$this->form_validation->set_rules('f_nama_warung','Nama Warung','required', array('required' => 'Nama Warung Wajib diisi'));
 			$this->form_validation->set_rules('f_alamat','Alamat','required', array('required' => 'Alamat wajib diisi'));
 			$this->form_validation->set_rules('f_no_telp','No Telp','required', array('required' => 'No Telp wajib diisi'));
 			if ($this->form_validation->run() == FALSE)
 			{
 				$data['warung'] = $this->model_warung->tampil_data()->result();
-				$this->session->set_flashdata('gagal','<div class="alert alert-danger" role="alert">Data Gagal Diupdate</div>');
+				$this->session->set_flashdata('gagal','<div class="alert alert-danger alert-dismissible" role="alert">
+				Data Gagal Diupdate 
+				<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+				</div>');
 				$data['title'] = 'Data Warung';
 				$this->load->view('templates_admin/header', $data);
 				$this->load->view('templates_admin/sidebar');
@@ -115,7 +124,10 @@
 				);
 
 				$this->model_warung->update_data($where,$data,'tb_warung');
-				$this->session->set_flashdata('berhasil_update','<div class="alert alert-success" role="alert">Data Berhasil Diupdate</div>');
+				$this->session->set_flashdata('berhasil_update','<div class="alert alert-success alert-dismissible" role="alert">
+				Data Berhasil Diupdate 
+				<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+				</div>');
 				redirect('admin/data_warung/index');
 			}
 		}

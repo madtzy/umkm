@@ -56,7 +56,7 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-xs-12 text-white" id="copyright">Copyright &copy; 2021 All Rights Reserved by-UMKM</div>
+          <div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-xs-12 text-white" id="copyright">Copyright &copy; 2021 All Rights Reserved by UMKM Makanan</div>
           <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-xs-12" id="sosmed">
             <a class="text-decoration-none text-white me-2" data-bs-toggle="tooltip" data-bs-placement="bottom" target="blank" title="Facebook" href="https://web.facebook.com/profile.php?id=100072188437967">
               <i class="bx bxl-facebook"></i>

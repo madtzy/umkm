@@ -22,6 +22,6 @@
 	</div>
 	<footer class="footer-edit bg-white">
 		<div class="copyright text-center my-auto">
-			<span>Copyright &copy; 2021 All Rights Reserved by-UMKM</span>
+			<span>Copyright &copy; 2021 All Rights Reserved by UMKM Makanan</span>
 		</div>
 	</footer>

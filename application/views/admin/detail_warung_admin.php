@@ -10,6 +10,10 @@
 						<div class="col-md-9">
 							<table class="table">
 								<tr>
+									<td>Id Warung</td>
+									<td><strong><?php echo $wrg->f_id_warung ?></strong></td>
+								</tr>
+								<tr>
 									<td>Nama Warung</td>
 									<td><strong><?php echo $wrg->f_nama_warung ?></strong></td>
 								</tr>

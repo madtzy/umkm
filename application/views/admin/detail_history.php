@@ -4,19 +4,19 @@
 		<table id="table" class="table table-dark table-striped" style="width:100%">
 		<thead>
 			<tr>
-				<th>Id Makanan</th>
 				<th>Nama Makanan</th>
 				<th>Harga</th>
 				<th>Nama Warung</th>
+				<th>Gambar</th>
 			</tr>
 		</thead>
 		<tbody>
 			<?php foreach ($pesanan as $pesan) : ?>
 				<tr>
-					<td><?php echo $pesan->f_id_makanan ?></td>
 					<td><?php echo $pesan->f_nama_makanan ?></td>
 					<td>Rp. <?php echo number_format($pesan->f_harga,0,',','.') ?></td>
 					<td><?php echo $pesan->f_nama_warung ?></td>
+					<td><img src="<?php echo base_url() . '/uploads/makanan/' . $pesan->f_gambar ?>" style="width:150px"></td>
 				</tr>
 			<?php endforeach; ?>
 		</tbody>
@@ -28,6 +28,6 @@
 </div>
 <footer class="footer-detail-history bg-white">
 	<div class="copyright text-center">
-		<span>Copyright &copy; 2021 All Rights Reserved by-UMKM</span>
+		<span>Copyright &copy; 2021 All Rights Reserved by UMKM Makanan</span>
 	</div>
 </footer>
