@@ -15,7 +15,6 @@
 			$data['title'] = 'Detail Warung';
 			$this->load->view('templates/header', $data);
 			$this->load->view('detail_warung', $data);
-			$this->load->view('templates/footer');
 		}
 		public function search()
 		{
@@ -31,6 +30,7 @@
 		{
 			$warung = urldecode($this->uri->segment(3));
 			$data ['makanan_warung'] = $this->model_kategori_warung->ambil_makanan_warung($warung)->result();
+			$data ['minuman_warung'] = $this->model_kategori_warung->ambil_minuman_warung($warung)->result();
 			$data['title'] = 'Masuk Warung';
 			$this->load->view('templates/header', $data);
 			$this->load->view('templates/sidebar');

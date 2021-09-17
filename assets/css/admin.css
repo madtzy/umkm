@@ -139,6 +139,9 @@ a {
 .aksi{
 	margin-top: 305px;
 }
+.dropdown-item:hover {
+	background-color: var(--yellow-color) !important;
+}
 
 /* body */
 .margin{

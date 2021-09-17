@@ -1,5 +1,5 @@
 <?php
-	class Data_join extends CI_Controller{
+	class Data_mitra extends CI_Controller{
 		public function __construct()
 		{
 			parent::__construct();
@@ -13,18 +13,18 @@
 		}
 		public function index()
 		{
-			$data['join'] = $this->model_join->tampil_data();
-			$data['title'] = 'Data Join';
+			$data['mitra'] = $this->model_mitra->tampil_data();
+			$data['title'] = 'Data mitra';
 			$this->load->view('templates_admin/header', $data);
 			$this->load->view('templates_admin/sidebar');
 			$this->load->view('templates_admin/footer');
-			$this->load->view('admin/data_join', $data);
+			$this->load->view('admin/data_mitra', $data);
         }
-        public function hapus($id_join)
+        public function hapus($id_mitra)
 		{
-			$where = array('f_id_join' => $id_join);
-			$this->model_join->hapus_data($where, 'tb_join');
-			redirect('admin/data_join/index');
+			$where = array('f_id_mitra' => $id_mitra);
+			$this->model_mitra->hapus_data($where, 'tb_mitra');
+			redirect('admin/data_mitra/index');
 		}
 	}
 ?>

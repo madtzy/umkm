@@ -1,11 +1,11 @@
 <div class="row mt-4">
     <div class="col-xl-3 col-lg-3 col-md-2 col-sm-2 col-xs-1"></div>
     <div class="col-xl-6 col-lg-6 col-md-8 col-sm-8 col-xs-10">
-        <h5 class="fw-bold text-center">FORM JOIN WARUNG</h5>
-        <form method="post" action="<?php echo base_url('join/tambah_join'); ?>">
+        <h5 class="fw-bold text-center">FORM MITRA WARUNG</h5>
+        <form method="post" action="<?php echo base_url('mitra/tambah_mitra'); ?>">
             <div class="form-group mt-2">
-                <label for="nama">Nama</label>
-                <input type="text" id="nama" name="f_nama" class="form-control" value="<?php echo set_value('f_nama') ?>">
+                <label for="nama_mitra">Nama Mitra</label>
+                <input type="text" id="nama_mitra" name="f_nama_mitra" class="form-control" value="<?php echo set_value('f_nama_mitra') ?>">
             </div>
             <?php echo form_error('f_nama', '<div class="text-danger small">', '</div>') ?>
             <div class="form-group mt-2">
@@ -23,7 +23,7 @@
                 <input type="text" id="telp" name="f_no_telp_warung" class="form-control" value="<?php echo set_value('f_no_telp_warung') ?>">
             </div>
             <?php echo form_error('f_no_telp_warung', '<div class="text-danger small">', '</div>') ?>
-            <button type="submit" class="next_join btn btn-sm btn-primary mt-3">Join</button>
+            <button type="submit" class="next_mitra btn btn-sm btn-primary mt-3">Mitra</button>
         </form>
     </div>
     <div class="col-xl-3 col-lg-3 col-md-2 col-sm-2 col-xs-1"></div>

@@ -7,11 +7,11 @@
                                 <div class="card-body bg-primary py-4">
                                     <div class="row align-items-center">
                                         <div class="col me-2">
-                                            <div class="fw-bold text-dark text-uppercase mb-1">DATA MAKANAN</div>
-                                            <div class="h5 mb-0 fw-bold text-dark"><?php echo $data_makanan ?></div>
+                                            <div class="fw-bold text-dark text-uppercase mb-1">DATA MENU</div>
+                                            <div class="h5 mb-0 fw-bold text-dark"><?php echo $data_makanan+$data_minuman ?></div>
                                         </div>
                                         <div class="col-auto">
-                                            <i class="bx bxs-pizza bx-lg"></i>
+                                            <i class= "bx bx-food-menu bx-lg"></i>
                                         </div>
                                     </div>
                                 </div>
@@ -33,14 +33,14 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- Data History -->
+                        <!-- Data Riwayat -->
                         <div class="col-3">
                             <div class="card shadow py-2 card-dashboard">
                                 <div class="card-body bg-success py-4">
                                     <div class="row align-items-center">
                                         <div class="col me-2">
-                                            <div class="fw-bold text-dark text-uppercase mb-1">DATA HISTORY</div>
-                                            <div class="h5 mb-0 fw-bold text-dark"><?php echo $data_history ?></div>
+                                            <div class="fw-bold text-dark text-uppercase mb-1">DATA RIWAYAT</div>
+                                            <div class="h5 mb-0 fw-bold text-dark"><?php echo $data_riwayat ?></div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="bx bx-history bx-lg"></i>
@@ -49,14 +49,14 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- Data Join -->
+                        <!-- Data Mitra -->
                         <div class="col-3">
                             <div class="card shadow py-2 card-dashboard">
                                 <div class="card-body bg-danger py-4">
                                     <div class="row align-items-center">
                                         <div class="col me-2">
-                                            <div class="fw-bold text-dark text-uppercase mb-1">DATA JOIN</div>
-                                            <div class="h5 mb-0 fw-bold text-dark"><?php echo $data_join ?></div>
+                                            <div class="fw-bold text-dark text-uppercase mb-1">DATA MITRA</div>
+                                            <div class="h5 mb-0 fw-bold text-dark"><?php echo $data_mitra ?></div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="bx bxs-user-rectangle bx-lg"></i>

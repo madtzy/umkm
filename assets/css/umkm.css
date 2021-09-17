@@ -38,10 +38,10 @@ body{
     transform: scale(1.03);  
 }
 /* button */
-.join{
+.mitra{
     border-radius: 10px;  
 }
-.join:hover{
+.mitra:hover{
     background-color: blue;
     transform: scale(1.05);
 }
@@ -70,7 +70,7 @@ body{
     background-color: blue;
     transform: scale(1.02);
 }
-.next_join:hover{
+.next_mitra:hover{
     background-color: blue;
     transform: scale(1.02);
 }

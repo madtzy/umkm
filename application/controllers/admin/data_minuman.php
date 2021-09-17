@@ -1,6 +1,6 @@
 <?php 
 
-	class Data_makanan extends CI_Controller {
+	class Data_minuman extends CI_Controller {
 
 		public function __construct()
 		{
@@ -15,16 +15,16 @@
 		}
 		public function index()
 		{
-			$data['makanan'] = $this->model_makanan->tampil_data()->result();
-			$data['title'] = 'Data Makanan';
+			$data['minuman'] = $this->model_minuman->tampil_data()->result();
+			$data['title'] = 'Data Menu Minuman';
 			$this->load->view('templates_admin/header', $data);
 			$this->load->view('templates_admin/sidebar');
-			$this->load->view('admin/data_makanan', $data);
+			$this->load->view('admin/data_minuman', $data);
 			$this->load->view('templates_admin/footer');
 		}
 		public function tambah_aksi ()
 		{
-			$this->form_validation->set_rules('f_nama_makanan','Nama Makanan','required', array('required' => 'Nama Makanan Wajib diisi'));
+			$this->form_validation->set_rules('f_nama_minuman','Nama Minuman','required', array('required' => 'Nama Minuman Wajib diisi'));
 			$this->form_validation->set_rules('f_harga','Harga','required', array('required' => 'Harga wajib diisi'));
 			$this->form_validation->set_rules('f_nama_warung','Nama warung','required', array('required' => 'Nama Warung wajib diisi'));
 			if (empty($_FILES['f_gambar']['name'])){
@@ -32,7 +32,7 @@
 			}
 			if ($this->form_validation->run() == FALSE)
 			{
-				$data['makanan'] = $this->model_makanan->tampil_data()->result();
+				$data['minuman'] = $this->model_minuman->tampil_data()->result();
 				$this->session->set_flashdata('gagal_tambah','<div class="alert alert-danger alert-dismissible" role="alert">
 				Data Gagal Ditambahkan 
 				<button class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
@@ -40,15 +40,15 @@
 				$data['title'] = 'Data Menu Makanan';
 				$this->load->view('templates_admin/header', $data);
 				$this->load->view('templates_admin/sidebar');
-				$this->load->view('admin/data_makanan', $data);
+				$this->load->view('admin/data_minuman', $data);
 				$this->load->view('templates_admin/footer');
 			}else{
-				$nama_makanan 	= $this->input->post('f_nama_makanan');
+				$nama_minuman 	= $this->input->post('f_nama_minuman');
 				$harga 			= $this->input->post('f_harga');
 				$nama_warung 	= $this->input->post('f_nama_warung');
 				$gambar 		= $_FILES['f_gambar']['name'];
 				if ($gambar = ''){}else{
-					$config ['upload_path'] = './uploads/makanan';
+					$config ['upload_path'] = './uploads/minuman';
 					$config ['allowed_types'] = 'jpg|jpeg|png|gif';
 					$config['remove_spaces'] = TRUE;
 
@@ -60,43 +60,43 @@
 					}
 				}
 				$data = array (
-					'f_nama_makanan'	=>$nama_makanan,
+					'f_nama_minuman'	=>$nama_minuman,
 					'f_harga'			=>$harga,
 					'f_nama_warung'		=>$nama_warung,
 					'f_gambar'			=>$gambar
 	
 				);
 	
-				$this->model_makanan->tambah_data($data, 'tb_makanan');
+				$this->model_minuman->tambah_data($data, 'tb_minuman');
 				$this->session->set_flashdata('berhasil_tambah','<div class="alert alert-success alert-dismissible" role="alert">
 				Data Berhasil Ditambahkan 
 				<button class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 				</div>');
-				redirect('admin/data_makanan/index');
+				redirect('admin/data_minuman/index');
 				}
 		}
 
-		public function edit($id_makanan)
+		public function edit($id_minuman)
 		{
-			$where = array('f_id_makanan' => $id_makanan);
-			$data['makanan'] = $this->model_makanan->edit_data($where,'tb_makanan')->result();
-			$data['title'] = 'Edit makanan';
+			$where = array('f_id_minuman' => $id_minuman);
+			$data['minuman'] = $this->model_minuman->edit_data($where,'tb_minuman')->result();
+			$data['title'] = 'Edit Menu Minuman';
 
 			$this->load->view('templates_admin/header', $data);
 			$this->load->view('templates_admin/sidebar');
 			$this->load->view('templates_admin/footer');
-			$this->load->view('admin/edit_makanan', $data);
+			$this->load->view('admin/edit_minuman', $data);
 
 		}
 
 		public function update()
 		{
-			$this->form_validation->set_rules('f_nama_makanan','Nama Makanan','required', array('required' => 'Nama Makanan Wajib diisi'));
+			$this->form_validation->set_rules('f_nama_minuman','Nama Minuman','required', array('required' => 'Nama Minuman Wajib diisi'));
 			$this->form_validation->set_rules('f_harga','Harga','required', array('required' => 'Harga wajib diisi'));
 			$this->form_validation->set_rules('f_nama_warung','Nama warung','required', array('required' => 'Nama Warung wajib diisi'));
 			if ($this->form_validation->run() == FALSE)
 			{
-				$data['makanan'] = $this->model_makanan->tampil_data()->result();
+				$data['minuman'] = $this->model_minuman->tampil_data()->result();
 				$this->session->set_flashdata('gagal_update','<div class="alert alert-danger alert-dismissible" role="alert">
 				Data Gagal Diupdate
 				<button class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
@@ -104,49 +104,49 @@
 				$data['title'] = 'Edit Menu Makanan';
 				$this->load->view('templates_admin/header', $data);
 				$this->load->view('templates_admin/sidebar');
-				$this->load->view('admin/data_makanan', $data);
+				$this->load->view('admin/data_minuman', $data);
 				$this->load->view('templates_admin/footer');
 			}else{
-				$id_makanan 	= $this->input->post('f_id_makanan');
-				$nama_makanan 	= $this->input->post('f_nama_makanan');
+				$id_minuman 	= $this->input->post('f_id_minuman');
+				$nama_minuman 	= $this->input->post('f_nama_minuman');
 				$harga			= $this->input->post('f_harga');
 				$nama_warung    = $this->input->post('f_nama_warung');
 				
 				
 				$data = array (
-					'f_nama_makanan'	=>$nama_makanan,
+					'f_nama_minuman'	=>$nama_minuman,
 					'f_harga'			=>$harga,
 					'f_nama_warung'	    =>$nama_warung
 				
 				);
 
 				$where = array (
-					'f_id_makanan' => $id_makanan
+					'f_id_minuman' => $id_minuman
 				);
 
-				$this->model_makanan->update_data($where,$data,'tb_makanan');
+				$this->model_minuman->update_data($where,$data,'tb_minuman');
 				$this->session->set_flashdata('berhasil_update','<div class="alert alert-success alert-dismissible" role="alert">
 				Data Berhasil Diupdate 
 				<button class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 				</div>');
-				redirect('admin/data_makanan/index');
+				redirect('admin/data_minuman/index');
 			}
 		}
 
-		public function hapus($id_makanan)
+		public function hapus($id_minuman)
 		{
-			$where = array('f_id_makanan' => $id_makanan);
-			$this->model_makanan->hapus_data($where, 'tb_makanan');
-			redirect('admin/data_makanan/index');
+			$where = array('f_id_minuman' => $id_minuman);
+			$this->model_minuman->hapus_data($where, 'tb_minuman');
+			redirect('admin/data_minuman/index');
 		}
-		public function detail_makanan_admin($id_makanan)
+		public function detail_minuman_admin($id_minuman)
 		{
-			$data['makanan'] = $this->model_makanan->detail_makanan_admin($id_makanan);
-			$data['title'] = 'Detail Makanan';
+			$data['minuman'] = $this->model_minuman->detail_minuman_admin($id_minuman);
+			$data['title'] = 'Detail Menu Makanan';
 			$this->load->view('templates_admin/header', $data);
 			$this->load->view('templates_admin/sidebar');
 			$this->load->view('templates_admin/footer');
-			$this->load->view('admin/detail_makanan_admin', $data);
+			$this->load->view('admin/detail_minuman_admin', $data);
 		}
 
 	}

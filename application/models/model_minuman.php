@@ -1,9 +1,9 @@
 <?php 
-	class Model_makanan extends CI_Model{
+	class Model_minuman extends CI_Model{
 
 		public function tampil_data()
 		{
-			return $this->db->get('tb_makanan');
+			return $this->db->get('tb_minuman');
 		}
 		public function tambah_data($data,$table)
 		{
@@ -23,9 +23,9 @@
 			$this->db->where($where);
 			$this->db->delete($table);
 		}
-		public function detail_makanan_admin($id_makanan)
+		public function detail_minuman_admin($id_minuman)
 		{
-			$result = $this->db->where('f_id_makanan', $id_makanan)->get('tb_makanan');
+			$result = $this->db->where('f_id_minuman', $id_minuman)->get('tb_minuman');
 			if($result->num_rows() > 0){
 				return $result->result();
 			}else {

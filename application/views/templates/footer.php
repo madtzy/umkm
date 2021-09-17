@@ -13,7 +13,7 @@
             </div>
           </div>
           <div class="col-xl-2 offset-xl-1 col-lg-6 col-md-6 col-sm-12 text-secondary" style="text-align: justify !important;">
-            <div id="judul" class="fw-bold text-white mt-3 mb-3">Menu</div>
+            <div id="judul" class="fw-bold text-white mt-3 mb-3">Kategori</div>
             <div id="content">
               <div>
                 <i class="bx bxs-dashboard me-1"></i>
@@ -21,7 +21,7 @@
               </div>
               <div>
                 <i class="bx bxs-pizza me-1"></i>
-                <a class=" text-secondary" href="<?php echo base_url("makanan/lihat_makanan") ?>">Makanan</a>
+                <a class=" text-secondary" href="<?php echo base_url("menu/lihat_menu") ?>">Menu</a>
               </div>
               <div>
                 <i class="bx bxs-institution me-1"></i>

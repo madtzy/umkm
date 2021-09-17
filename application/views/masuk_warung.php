@@ -27,12 +27,12 @@
 </div>
 <!-- end carousel -->
 
-<!-- start context masuk makanan -->
+<!-- start context masuk Menu -->
 <div class="container py-2">
     <div class="row">
         <div class="col-12 text-center">
-            <h5 class="judul text-center fw-bold mt-3">MAKANAN</h5>
-            <?php echo form_open('makanan/search'); ?>
+            <h5 class="judul text-center fw-bold mt-3">MENU</h5>
+            <?php echo form_open('menu/search'); ?>
             <div class="form-group d-flex">
                 <input class="search form-control me-2" name="keyword" type="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-search btn-outline-dark" type="submit">Search</button>
@@ -42,19 +42,34 @@
     </div>
 
     <div class="row mt-3">
-        <?php foreach ($makanan_warung as $makan) : ?>
+        <?php foreach ($makanan_warung as $mkn) : ?>
             <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12 text-center">
                 <div class="card mt-3">
-                    <img src="<?php echo base_url() . '/uploads/makanan/' . $makan->f_gambar ?>" class="card-img-top gambar" alt="...">
+                    <img src="<?php echo base_url() . '/uploads/makanan/' . $mkn->f_gambar ?>" class="card-img-top gambar" alt="...">
                     <div class="card-body text-center">
-                        <h5 class="card-title mb-2"><?php echo $makan->f_nama_makanan ?></h5>
-                        <span class="badge bg-success mb-2">Rp. <?php echo number_format($makan->f_harga, 0, ',', '.') ?></span>
-                        <h6 class="card-title"><?php echo $makan->f_nama_warung ?></h6>
-                        <?php echo anchor('makanan/pembelian/' . $makan->f_id_makanan, '<div class="beli btn btn-sm btn-primary">Beli</div>'); ?>
+                        <h5 class="card-title mb-2"><?php echo $mkn->f_nama_makanan ?></h5>
+                        <span class="badge bg-success mb-2">Rp. <?php echo number_format($mkn->f_harga, 0, ',', '.') ?></span>
+                        <h6 class="card-title"><?php echo $mkn->f_nama_warung ?></h6>
+                        <?php echo anchor('makanan/pembelian_makanan/' . $mkn->f_id_makanan, '<div class="beli btn btn-sm btn-primary">Beli</div>'); ?>
                     </div>
                 </div>
             </div>
         <?php endforeach; ?>
+
+        <?php foreach ($minuman_warung as $mnm) : ?>
+            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12 text-center">
+                <div class="card mt-3">
+                    <img src="<?php echo base_url() . '/uploads/minuman/' . $mnm->f_gambar ?>" class="card-img-top gambar" alt="...">
+                    <div class="card-body text-center">
+                        <h5 class="card-title mb-2"><?php echo $mnm->f_nama_minuman ?></h5>
+                        <span class="badge bg-success mb-2">Rp. <?php echo number_format($mnm->f_harga, 0, ',', '.') ?></span>
+                        <h6 class="card-title"><?php echo $mnm->f_nama_warung ?></h6>
+                        <?php echo anchor('minuman/pembelian_minuman/' . $mnm->f_id_minuman, '<div class="beli btn btn-sm btn-primary">Beli</div>'); ?>
+                    </div>
+                </div>
+            </div>
+        <?php endforeach; ?>
+        
     </div>
 </div>
-<!-- end content masuk makanan -->
+<!-- end content masuk Menu -->

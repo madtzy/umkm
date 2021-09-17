@@ -1,24 +1,24 @@
 <div class="row mt-4">
     <div class="col-xl-3 col-lg-3 col-md-2 col-sm-2 col-xs-1"></div>
     <div class="col-xl-6 col-lg-6 col-md-8 col-sm-8 col-xs-10">
-        <h5 class="fw-bold text-center">FORM PEMBELIAN MAKANAN</h5>
-        <form method="post" action="<?php echo base_url('makanan/tambah_pembeli'); ?>" class="pembelian">
-            <?php foreach ($makanan as $makan) : ?>
+        <h5 class="fw-bold text-center">FORM PEMBELIAN MINUMAN</h5>
+        <form method="post" action="<?php echo base_url('minuman/tambah_pembeli'); ?>" class="pembelian">
+            <?php foreach ($minuman as $mnm) : ?>
                 <div class="form-group">
-                    <input type="hidden" name="f_id_makanan" class="form-control" value="<?php echo $makan->f_id_makanan ?>">
+                    <input type="hidden" name="f_id_minuman" class="form-control" value="<?php echo $mnm->f_id_minuman ?>">
                 </div>
                 <div class="form-group">
-                    <input type="hidden" name="f_nama_makanan" class="form-control" value="<?php echo $makan->f_nama_makanan ?>">
+                    <input type="hidden" name="f_nama_minuman" class="form-control" value="<?php echo $mnm->f_nama_minuman ?>">
                 </div>
                 <div class="form-group">
-                    <input type="hidden" name="f_harga" class="form-control" id="harga" value="<?php echo $makan->f_harga ?>">
+                    <input type="hidden" name="f_harga" class="form-control" id="harga" value="<?php echo $mnm->f_harga ?>">
                 </div>
                 <div class="form-group">
-                    <input type="hidden" name="f_nama_warung" class="form-control" value="<?php echo $makan->f_nama_warung ?>">
+                    <input type="hidden" name="f_nama_warung" class="form-control" value="<?php echo $mnm->f_nama_warung ?>">
                 </div>
             <?php endforeach; ?>
             <div class="form-group mt-2">
-                <label for="nama">Nama</label>
+                <label for="nama">Nama Pembeli</label>
                 <input type="text" id="nama" name="f_nama_pembeli" class="form-control">
                 <?php echo form_error('f_nama_pembeli', '<div class="text-danger small">', '</div>') ?>
             </div>

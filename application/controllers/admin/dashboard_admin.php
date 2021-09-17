@@ -14,9 +14,10 @@
 		public function index()
 		{
 			$data['data_makanan'] = $this->model_dashboard->data_makanan();
+			$data['data_minuman'] = $this->model_dashboard->data_minuman();
 			$data['data_warung'] = $this->model_dashboard->data_warung();
-			$data['data_history'] = $this->model_dashboard->data_history();
-			$data['data_join'] = $this->model_dashboard->data_join();
+			$data['data_riwayat'] = $this->model_dashboard->data_riwayat();
+			$data['data_mitra'] = $this->model_dashboard->data_mitra();
 			$data['title'] = 'Dashboard Admin';
 			$this->load->view('templates_admin/header', $data);
 			$this->load->view('templates_admin/sidebar');

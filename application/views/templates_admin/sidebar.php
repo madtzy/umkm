@@ -17,17 +17,24 @@
                 <a href="<?php echo base_url('admin/dashboard_admin') ?>" class="nav__link active">
                     <span class="nav__name fs-6"><i class="bx bxs-dashboard bx-flashing nav__icon me-3" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Dashboard"></i>Dashboard</span>
                 </a>
-                <a href=" <?php echo base_url('admin/data_makanan') ?>" class="nav__link">
-                    <span class="nav__name fs-6"><i class="bx bxs-pizza nav__icon me-3" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Data Makanan"></i>Data Makanan</span>
+                <a class="nav-link dropdown-bs-toggle text-white me-3" data-bs-toggle="collapse" data-bs-target="#collapse" aria-expanded="false" aria-controls="collapse">
+                    <i class="bx bx-food-menu nav__icon ms-2 mb-3 me-3" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Data Menu"></i>Menu
                 </a>
+                <div id="collapse" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-dark py-2">
+                        <a class="dropdown-item text-white" href="<?php echo base_url('admin/data_makanan') ?>"><i class='bx bx-sm bxs-pizza ms-2 me-3'></i>Data Makanan</a>
+                        <hr class="dropdown-divider">
+                        <a class="dropdown-item text-white" href="<?php echo base_url('admin/data_minuman') ?>"><i class='bx bx-sm bxs-drink ms-2 me-3'></i>Data Minuman</a>
+                    </div>
+                </div>
                 <a href="<?php echo base_url('admin/data_warung/index') ?>" class="nav__link">
                     <span class="nav__name fs-6"><i class="bx bxs-institution nav__icon me-3" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Data Warung"></i>Data Warung</span>
                 </a>
-                <a href="<?php echo base_url('admin/data_history/index') ?>" class="nav__link">
-                    <span class="nav__name fs-6"><i class="bx bx-history nav__icon me-3" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Data History"></i>Data History</span>
+                <a href="<?php echo base_url('admin/data_riwayat/index') ?>" class="nav__link">
+                    <span class="nav__name fs-6"><i class="bx bx-history nav__icon me-3" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Data Riwayat"></i>Data Riwayat</span>
                 </a>
-                <a href="<?php echo base_url('admin/data_join/index') ?>" class="nav__link">
-                    <span class="nav__name fs-6"><i class="bx bxs-user-rectangle nav__icon me-3" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Data Join"></i>Data Join</span>
+                <a href="<?php echo base_url('admin/data_mitra/index') ?>" class="nav__link">
+                    <span class="nav__name fs-6"><i class="bx bxs-user-rectangle nav__icon me-3" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Data mitra"></i>Data Mitra</span>
                 </a>
                 <ul class="nav__link aksi">
                     <?php if ($this->session->userdata('f_username')) { ?>

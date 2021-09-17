@@ -27,5 +27,9 @@
 		{
 			return $this->db->get_where("tb_makanan", array('f_nama_warung' => $nama_warung));
 		}
+		public function ambil_minuman_warung($nama_warung)
+		{
+			return $this->db->get_where("tb_minuman", array('f_nama_warung' => $nama_warung));
+		}
 	}
 ?>

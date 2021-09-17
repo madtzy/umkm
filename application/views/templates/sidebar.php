@@ -12,13 +12,18 @@
             <a class="nav-link active text-white me-3" href="<?php echo base_url ("dashboard") ?>">Dashboard</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active text-white me-3" href="<?php echo base_url ("makanan/lihat_makanan") ?>">Makanan</a>
+            <a class="nav-link dropdown-toggle text-white me-3" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="true">Menu</a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="<?php echo base_url ("makanan/lihat_makanan") ?>">Makanan</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="<?php echo base_url ("minuman/lihat_minuman") ?>">Minuman</a></li>
+            </ul>
           </li>
           <li class="nav-item">
             <a class="nav-link active text-white me-3" href="<?php echo base_url ("warung/lihat_warung") ?>">Warung</a>
           </li>
           <li class="nav-item my-auto">
-            <a class="join btn btn-sm btn-primary me-3" href="<?php echo base_url ("join/tampil_join") ?>">Join</a>
+            <a class="mitra btn btn-sm btn-primary me-3" href="<?php echo base_url ("mitra/tampil_mitra") ?>">Mitra</a>
           </li>      
         </ul>
       </div>

@@ -1,15 +1,15 @@
 	<div class="margin">
-		<h4 class="text-dark fw-bold mt-2 mb-4"><i class='bx bxs-pizza me-2'></i>DATA MAKANAN</h4>
+		<h4 class="text-dark fw-bold mt-2 mb-4"><i class='bx bxs-drink me-2'></i>DATA MINUMAN</h4>
 		<?php echo $this->session->flashdata('berhasil_tambah') ?>
 		<?php echo $this->session->flashdata('gagal_tambah') ?>
 		<?php echo $this->session->flashdata('berhasil_update') ?>
 		<?php echo $this->session->flashdata('gagal_update') ?>
-		<button type="button" class="btn btn-sm btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#tambah_makanan"><i class="fas fa-plus me-2"></i>TAMBAH MAKANAN</button>
+		<button type="button" class="btn btn-sm btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#tambah_minuman"><i class="fas fa-plus me-2"></i>TAMBAH MINUMAN</button>
 		<table id="table" class="table table-dark table-striped">
 			<thead>
 				<tr>
 					<th>No</th>
-					<th>Nama makanan</th>
+					<th>Nama Minuman</th>
 					<th>Harga</th>
 					<th>Nama Warung</th>
 					<th class="text-center">Aksi</th>
@@ -19,17 +19,17 @@
 			<tbody>
 				<?php
 				$no = 1;
-				foreach ($makanan as $mkn) : ?>
+				foreach ($minuman as $mkn) : ?>
 					<tr>
 						<td><?php echo $no++; ?></td>
-						<td><?php echo $mkn->f_nama_makanan; ?></td>
+						<td><?php echo $mkn->f_nama_minuman; ?></td>
 						<td>Rp. <?php echo number_format($mkn->f_harga, 0, ',', '.'); ?></td>
 						<td><?php echo $mkn->f_nama_warung ?></td>
 						<td class="text-center">
-							<button class="btn btn-sm btn-success me-3" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Detail Makanan"><?php echo anchor('admin/data_makanan/detail_makanan_admin/' . $mkn->f_id_makanan, '<i class="fas fa-search-plus text-white"></i>'); ?></button>
-							<button class="btn btn-sm btn-primary me-3" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Edit Makanan"><?php echo anchor('admin/data_makanan/edit/' . $mkn->f_id_makanan, '<i class="fa fa-edit text-white"></i>'); ?></button>
-							<span data-bs-toggle="modal" data-bs-target="#hapus_makanan">
-								<button type="button" class="btn btn-sm btn-danger me-3" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Hapus Makanan"><i class="fa fa-trash text-white"></i></button>
+							<button class="btn btn-sm btn-success me-3" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Detail Minuman"><?php echo anchor('admin/data_minuman/detail_minuman_admin/' . $mkn->f_id_minuman, '<i class="fas fa-search-plus text-white"></i>'); ?></button>
+							<button class="btn btn-sm btn-primary me-3" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Edit Minuman"><?php echo anchor('admin/data_minuman/edit/' . $mkn->f_id_minuman, '<i class="fa fa-edit text-white"></i>'); ?></button>
+							<span data-bs-toggle="modal" data-bs-target="#hapus_minuman">
+								<button type="button" class="btn btn-sm btn-danger me-3" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Hapus Minuman"><i class="fa fa-trash text-white"></i></button>
 							</span>
 
 
@@ -46,21 +46,21 @@
 	</footer>
 
 
-	<!-- Modal Tambah makanan-->
-	<div class="modal fade" id="tambah_makanan" tabindex="-1" aria-labelledby="tambah_makanan" aria-hidden="true">
+	<!-- Modal Tambah minuman-->
+	<div class="modal fade" id="tambah_minuman" tabindex="-1" aria-labelledby="tambah_minuman" aria-hidden="true">
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h5 class="modal-title" id="tambah_makanan">FORM INPUT MAKANAN</h5>
+					<h5 class="modal-title" id="tambah_minuman">FORM INPUT MINUMAN</h5>
 					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 				</div>
 				<div class="modal-body">
-					<form action="<?php echo base_url() . 'admin/data_makanan/tambah_aksi' ?>" method="post" enctype="multipart/form-data">
+					<form action="<?php echo base_url() . 'admin/data_minuman/tambah_aksi' ?>" method="post" enctype="multipart/form-data">
 						<div class="form-group">
-							<label for="makanan">Nama Makanan</label>
-							<input type="text" id="makanan" name="f_nama_makanan" class="form-control">
+							<label for="minuman">Nama Minuman</label>
+							<input type="text" id="minuman" name="f_nama_minuman" class="form-control">
 						</div>
-						<?php echo form_error('f_nama_makanan', '<div class="text-danger small">', '</div>') ?>
+						<?php echo form_error('f_nama_minuman', '<div class="text-danger small">', '</div>') ?>
 						<div class="form-group mt-2">
 							<label for="harga">Harga</label>
 							<input type="number" id="harga" name="f_harga" class="form-control">
@@ -86,19 +86,19 @@
 		</div>
 	</div>
 
-	<!-- Modal Hapus makanan-->
-	<div class="modal fade" id="hapus_makanan" tabindex="-1" aria-labelledby="hapus_makanan" aria-hidden="true">
+	<!-- Modal Hapus minuman-->
+	<div class="modal fade" id="hapus_minuman" tabindex="-1" aria-labelledby="hapus_minuman" aria-hidden="true">
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h5 class="modal-title" id="hapus_makanan">HAPUS MAKANAN</h5>
+					<h5 class="modal-title" id="hapus_minuman">HAPUS MINUMAN</h5>
 					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 				</div>
 				<div class="modal-body">
-					<p>Anda yakin ingin menghapus data makanan tersebut ?</p>
+					<p>Anda yakin ingin menghapus data minuman tersebut ?</p>
 				</div>
 				<div class="modal-footer">
-					<?php echo anchor('admin/data_makanan/hapus/' . $mkn->f_id_makanan, '<div class="btn btn-sm btn-primary">Hapus</div>') ?>
+					<?php echo anchor('admin/data_minuman/hapus/' . $mkn->f_id_minuman, '<div class="btn btn-sm btn-primary">Hapus</div>') ?>
 					<button type="button" class="btn btn-sm btn-danger" data-bs-dismiss="modal">Batal</button>
 				</div>
 			</div>

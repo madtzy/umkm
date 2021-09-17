@@ -1,5 +1,5 @@
 	<div class="margin">
-		<h5><i class="fas fa-edit me-3"></i>EDIT DATA WARUNG</h5>
+		<h5 class="text-dark fw-bold"><i class="fas fa-edit me-2"></i>EDIT DATA WARUNG</h5>
 		<?php foreach ($warung as $wrg) : ?>
 			<form method="post" action="<?php echo base_url() . 'admin/data_warung/update' ?>" >
 				<div class="for-group">
