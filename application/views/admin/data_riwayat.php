@@ -1,5 +1,6 @@
 <div class="margin">
-	<h4 class="text-dark fw-bold mt-2 mb-4"><i class="bx bx-history me-2"></i>DATA RIWAYAT</h4>
+	<h4 class="text-dark fw-bold mt-2"><i class="bx bx-history me-2"></i>DATA RIWAYAT</h4>
+	<hr>
 	<table id="table" class="table table-dark table-striped" style="width:100%">
 		<thead>
 			<tr>

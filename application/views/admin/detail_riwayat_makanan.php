@@ -1,6 +1,7 @@
 <div class="margin">
 	<div class="container-fluid">
 		<h5 class="text-dark fw-bold"><i class="fas fa-search-plus me-2"></i>DETAIL RIWAYAT<div class="btn btn-sm btn-success ms-2">No. Pembeli : <?php echo $riwayat->f_id_pembeli ?></div></h5>
+		<hr>
 		<table id="table" class="table table-dark table-striped" style="width:100%">
 		<thead>
 			<tr>

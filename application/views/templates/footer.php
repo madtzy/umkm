@@ -21,7 +21,11 @@
               </div>
               <div>
                 <i class="bx bxs-pizza me-1"></i>
-                <a class=" text-secondary" href="<?php echo base_url("menu/lihat_menu") ?>">Menu</a>
+                <a class=" text-secondary" href="<?php echo base_url("makanan/lihat_makanan") ?>">Makanan</a>
+              </div>
+              <div>
+                <i class="bx bxs-drink me-1"></i>
+                <a class=" text-secondary" href="<?php echo base_url("minuman/lihat_minuman") ?>">Minuman</a>
               </div>
               <div>
                 <i class="bx bxs-institution me-1"></i>

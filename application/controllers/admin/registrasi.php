@@ -24,7 +24,7 @@
                     'f_id'        =>'',
                     'f_nama'      =>$this->input->post('f_nama'),
                     'f_username'  =>$this->input->post('f_username'),
-                    'f_password'  =>$this->input->post('f_password_1')
+                    'f_password'  =>password_hash($this->input->post('f_password_1'),PASSWORD_DEFAULT) 
                 );
 
                 $this->db->insert('tb_admin', $data);

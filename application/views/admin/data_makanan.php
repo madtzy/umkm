@@ -1,5 +1,6 @@
 	<div class="margin">
-		<h4 class="text-dark fw-bold mt-2 mb-4"><i class='bx bxs-pizza me-2'></i>DATA MAKANAN</h4>
+		<h4 class="text-dark fw-bold mt-2"><i class='bx bxs-pizza me-2'></i>DATA MAKANAN</h4>
+		<hr>
 		<?php echo $this->session->flashdata('berhasil_tambah') ?>
 		<?php echo $this->session->flashdata('gagal_tambah') ?>
 		<?php echo $this->session->flashdata('berhasil_update') ?>
@@ -31,8 +32,6 @@
 							<span data-bs-toggle="modal" data-bs-target="#hapus_makanan">
 								<button type="button" class="btn btn-sm btn-danger me-3" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Hapus Makanan"><i class="fa fa-trash text-white"></i></button>
 							</span>
-
-
 						</td>
 					</tr>
 				<?php endforeach; ?>

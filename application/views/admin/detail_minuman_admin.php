@@ -1,6 +1,6 @@
 	<div class="margin">
 		<div class="card">
-			<div class="card-header fw-bold bg-primary"><i class="fas fa-search-plus me-2"></i>DETAIL MAKANAN</div>
+			<div class="card-header fw-bold bg-primary"><i class="fas fa-search-plus me-2"></i>DETAIL MINUMAN</div>
 			<div class="card-body">
 				<?php foreach ($minuman as $mnm) : ?>
 					<div class="row">

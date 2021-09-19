@@ -1,5 +1,6 @@
 	<div class="margin">
-		<h4 class="text-dark fw-bold mt-2 mb-4"><i class="bx bxs-institution me-2"></i>DATA WARUNG</h4>
+		<h4 class="text-dark fw-bold mt-2"><i class="bx bxs-institution me-2"></i>DATA WARUNG</h4>
+		<hr>
 		<?php echo $this->session->flashdata('berhasil') ?>
 		<?php echo $this->session->flashdata('gagal') ?>
 		<?php echo $this->session->flashdata('berhasil_update') ?>

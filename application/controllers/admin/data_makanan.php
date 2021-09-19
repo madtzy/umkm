@@ -107,29 +107,62 @@
 				$this->load->view('admin/data_makanan', $data);
 				$this->load->view('templates_admin/footer');
 			}else{
-				$id_makanan 	= $this->input->post('f_id_makanan');
-				$nama_makanan 	= $this->input->post('f_nama_makanan');
-				$harga			= $this->input->post('f_harga');
-				$nama_warung    = $this->input->post('f_nama_warung');
-				
-				
-				$data = array (
-					'f_nama_makanan'	=>$nama_makanan,
-					'f_harga'			=>$harga,
-					'f_nama_warung'	    =>$nama_warung
-				
-				);
+				$config ['upload_path'] = './uploads/makanan';
+				$config ['allowed_types'] = 'jpg|jpeg|png|gif';
+				$config['remove_spaces'] = TRUE;
 
-				$where = array (
-					'f_id_makanan' => $id_makanan
-				);
+				$this->load->library('upload', $config);
 
-				$this->model_makanan->update_data($where,$data,'tb_makanan');
-				$this->session->set_flashdata('berhasil_update','<div class="alert alert-success alert-dismissible" role="alert">
-				Data Berhasil Diupdate 
-				<button class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-				</div>');
-				redirect('admin/data_makanan/index');
+				if(!$this->upload->do_upload('f_gambar')){
+					$id_makanan 	= $this->input->post('f_id_makanan');
+					$nama_makanan 	= $this->input->post('f_nama_makanan');
+					$harga			= $this->input->post('f_harga');
+					$nama_warung    = $this->input->post('f_nama_warung');
+					
+					
+					$data = array (
+						'f_nama_makanan'	=>$nama_makanan,
+						'f_harga'			=>$harga,
+						'f_nama_warung'	    =>$nama_warung
+					
+					);
+	
+					$where = array (
+						'f_id_makanan' => $id_makanan
+					);
+	
+					$this->model_makanan->update_data($where,$data,'tb_makanan');
+					$this->session->set_flashdata('gagal_update','<div class="alert alert-danger alert-dismissible" role="alert">
+					Data Gagal Diupdate 
+					<button class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+					</div>');
+					redirect('admin/data_makanan/index');
+				}else{
+					$id_makanan 	= $this->input->post('f_id_makanan');
+					$nama_makanan 	= $this->input->post('f_nama_makanan');
+					$harga			= $this->input->post('f_harga');
+					$nama_warung    = $this->input->post('f_nama_warung');
+					$gambar			= $this->upload->data('file_name');
+
+					$data = array (
+						'f_nama_makanan'	=>$nama_makanan,
+						'f_harga'			=>$harga,
+						'f_nama_warung'	    =>$nama_warung,
+						'f_gambar'			=>$gambar
+					
+					);
+	
+					$where = array (
+						'f_id_makanan' => $id_makanan
+					);
+	
+					$this->model_makanan->update_data($where,$data,'tb_makanan');
+					$this->session->set_flashdata('berhasil_update','<div class="alert alert-success alert-dismissible" role="alert">
+					Data Berhasil Diupdate 
+					<button class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+					</div>');
+					redirect('admin/data_makanan/index');
+				}
 			}
 		}
 

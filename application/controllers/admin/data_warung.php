@@ -106,29 +106,62 @@
 				$this->load->view('admin/data_warung', $data);
 				$this->load->view('templates_admin/footer');	
 			}else{
-				$id_warung 		= $this->input->post('f_id_warung');
-				$nama_warung 	= $this->input->post('f_nama_warung');
-				$alamat			= $this->input->post('f_alamat');
-				$no_telp    	= $this->input->post('f_no_telp');
-				
+				$config ['upload_path'] = './uploads/warung';
+				$config ['allowed_types'] = 'jpg|jpeg|png|gif';
+				$config['remove_spaces'] = TRUE;
 
-				$data = array (
-					'f_nama_warung'		=>$nama_warung,
-					'f_alamat'			=>$alamat,
-					'f_no_telp'	        =>$no_telp
-				
-				);
+				$this->load->library('upload', $config);
 
-				$where = array (
-					'f_id_warung' => $id_warung
-				);
-
-				$this->model_warung->update_data($where,$data,'tb_warung');
-				$this->session->set_flashdata('berhasil_update','<div class="alert alert-success alert-dismissible" role="alert">
-				Data Berhasil Diupdate 
-				<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-				</div>');
-				redirect('admin/data_warung/index');
+				if(!$this->upload->do_upload('f_gambar')){
+					$id_warung 		= $this->input->post('f_id_warung');
+					$nama_warung 	= $this->input->post('f_nama_warung');
+					$alamat			= $this->input->post('f_alamat');
+					$no_telp    	= $this->input->post('f_no_telp');
+					
+	
+					$data = array (
+						'f_nama_warung'		=>$nama_warung,
+						'f_alamat'			=>$alamat,
+						'f_no_telp'	        =>$no_telp
+					
+					);
+	
+					$where = array (
+						'f_id_warung' => $id_warung
+					);
+	
+					$this->model_warung->update_data($where,$data,'tb_warung');
+					$this->session->set_flashdata('gagal_update','<div class="alert alert-danger alert-dismissible" role="alert">
+					Data Gagal Diupdate 
+					<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+					</div>');
+					redirect('admin/data_warung/index');
+				}else{
+					$id_warung 		= $this->input->post('f_id_warung');
+					$nama_warung 	= $this->input->post('f_nama_warung');
+					$alamat			= $this->input->post('f_alamat');
+					$no_telp    	= $this->input->post('f_no_telp');
+					$gambar			= $this->upload->data('file_name');
+					
+					$data = array (
+						'f_nama_warung'		=>$nama_warung,
+						'f_alamat'			=>$alamat,
+						'f_no_telp'	        =>$no_telp,
+						'f_gambar'			=>$gambar
+					
+					);
+	
+					$where = array (
+						'f_id_warung' => $id_warung
+					);
+	
+					$this->model_warung->update_data($where,$data,'tb_warung');
+					$this->session->set_flashdata('berhasil_update','<div class="alert alert-success alert-dismissible" role="alert">
+					Data Berhasil Diupdate 
+					<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+					</div>');
+					redirect('admin/data_warung/index');
+				}
 			}
 		}
 

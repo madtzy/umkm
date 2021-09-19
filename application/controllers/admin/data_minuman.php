@@ -107,29 +107,61 @@
 				$this->load->view('admin/data_minuman', $data);
 				$this->load->view('templates_admin/footer');
 			}else{
-				$id_minuman 	= $this->input->post('f_id_minuman');
-				$nama_minuman 	= $this->input->post('f_nama_minuman');
-				$harga			= $this->input->post('f_harga');
-				$nama_warung    = $this->input->post('f_nama_warung');
-				
-				
-				$data = array (
-					'f_nama_minuman'	=>$nama_minuman,
-					'f_harga'			=>$harga,
-					'f_nama_warung'	    =>$nama_warung
-				
-				);
+				$config ['upload_path'] = './uploads/minuman';
+				$config ['allowed_types'] = 'jpg|jpeg|png|gif';
+				$config['remove_spaces'] = TRUE;
 
-				$where = array (
-					'f_id_minuman' => $id_minuman
-				);
+				$this->load->library('upload', $config);
 
-				$this->model_minuman->update_data($where,$data,'tb_minuman');
-				$this->session->set_flashdata('berhasil_update','<div class="alert alert-success alert-dismissible" role="alert">
-				Data Berhasil Diupdate 
-				<button class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-				</div>');
-				redirect('admin/data_minuman/index');
+				if(!$this->upload->do_upload('f_gambar')){
+					$id_minuman 	= $this->input->post('f_id_minuman');
+					$nama_minuman 	= $this->input->post('f_nama_minuman');
+					$harga			= $this->input->post('f_harga');
+					$nama_warung    = $this->input->post('f_nama_warung');
+					
+					
+					$data = array (
+						'f_nama_minuman'	=>$nama_minuman,
+						'f_harga'			=>$harga,
+						'f_nama_warung'	    =>$nama_warung
+					
+					);
+	
+					$where = array (
+						'f_id_minuman' => $id_minuman
+					);
+	
+					$this->model_minuman->update_data($where,$data,'tb_minuman');
+					$this->session->set_flashdata('gagal_update','<div class="alert alert-danger alert-dismissible" role="alert">
+					Data Gagal Diupdate 
+					<button class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+					</div>');
+					redirect('admin/data_minuman/index');
+				}else{
+					$id_minuman 	= $this->input->post('f_id_minuman');
+					$nama_minuman 	= $this->input->post('f_nama_minuman');
+					$harga			= $this->input->post('f_harga');
+					$nama_warung    = $this->input->post('f_nama_warung');
+					$gambar			= $this->upload->data('file_name');
+					
+					$data = array (
+						'f_nama_minuman'	=>$nama_minuman,
+						'f_harga'			=>$harga,
+						'f_nama_warung'	    =>$nama_warung,
+						'f_gambar'			=>$gambar
+					);
+	
+					$where = array (
+						'f_id_minuman' => $id_minuman
+					);
+	
+					$this->model_minuman->update_data($where,$data,'tb_minuman');
+					$this->session->set_flashdata('berhasil_update','<div class="alert alert-success alert-dismissible" role="alert">
+					Data Berhasil Diupdate 
+					<button class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+					</div>');
+					redirect('admin/data_minuman/index');
+				}
 			}
 		}
 

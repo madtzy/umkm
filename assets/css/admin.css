@@ -92,7 +92,7 @@ a {
 
 .backgorund_logo{
 	position: relative;
-	background: var(--white-color);
+	background: var(--yellow-color);
 	width: 100%;
 	border-top-right-radius: 10px;
 	border-bottom-right-radius: 10px;
@@ -129,7 +129,8 @@ a {
 }
 
 .nav__link:hover {
-	color: var(--yellow-color);
+	background-color: var(--yellow-color);
+	transition: .3s;
 }
 
 .nav__icon {
@@ -175,7 +176,7 @@ a {
 }
 .footer-edit{
 	position: relative;
-	margin-top: 380px;
+	margin-top: 165px;
 }
 
 /*Show navbar movil*/

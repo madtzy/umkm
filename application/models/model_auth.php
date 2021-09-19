@@ -3,7 +3,7 @@
 		public function cek_login()
 		{
 			$username = set_value('f_username');
-			$password = set_value('f_password');
+			$password = password_verify(set_value('f_password'));
 
 			$result   = $this->db->where('f_username', $username)
 								 ->where('f_password', $password)

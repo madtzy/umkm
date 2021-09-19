@@ -1,4 +1,4 @@
-<div class="container-fluid fixed-top" id="nav">
+<div class="bg-navbar container-fluid fixed-top" id="nav">
   <div class="container">
     <nav class="navbar navbar-expand-lg navbar-light py-3">
       <i class="logo bx bx-sm bx-restaurant me-2"></i>
