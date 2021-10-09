@@ -23,29 +23,9 @@
 		}
 		public function tambah_aksi ()
 		{
-			$this->form_validation->set_rules('f_nama_warung','Nama Warung','required', array('required' => 'Nama Warung Wajib diisi'));
-			$this->form_validation->set_rules('f_alamat','Alamat','required', array('required' => 'Alamat wajib diisi'));
-			$this->form_validation->set_rules('f_no_telp','No Telp','required', array('required' => 'No Telp wajib diisi'));
-			if (empty($_FILES['f_gambar']['name'])){
-			$this->form_validation->set_rules('f_gambar','Gambar','required', array('required' => 'Gambar wajib diisi'));
-			}
-			if ($this->form_validation->run() == FALSE)
-			{
-				$data['warung'] = $this->model_warung->tampil_data()->result();
-				$this->session->set_flashdata('gagal','<div class="alert alert-danger alert-dismissible" role="alert">
-				Data Gagal Ditambahkan 
-				<button class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-				</div>');
-				$data['title'] = 'Data Warung';
-				$this->load->view('templates_admin/header', $data);
-				$this->load->view('templates_admin/sidebar');
-				$this->load->view('admin/data_warung', $data);
-				$this->load->view('templates_admin/footer');
-			}else{
 				$nama_warung 	= $this->input->post('f_nama_warung');
 				$alamat 		= $this->input->post('f_alamat');
 				$no_telp 	    = $this->input->post('f_no_telp');
-
 				$gambar 		= $_FILES['f_gambar']['name'];
 				if ($gambar = ''){}else{
 					$config ['upload_path'] = './uploads/warung';
@@ -72,7 +52,6 @@
 				<button class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 				</div>');
 				redirect('admin/data_warung/index');
-				}
 		}
 
 		public function edit($id_warung)
@@ -90,22 +69,6 @@
 
 		public function update()
 		{	
-			$this->form_validation->set_rules('f_nama_warung','Nama Warung','required', array('required' => 'Nama Warung Wajib diisi'));
-			$this->form_validation->set_rules('f_alamat','Alamat','required', array('required' => 'Alamat wajib diisi'));
-			$this->form_validation->set_rules('f_no_telp','No Telp','required', array('required' => 'No Telp wajib diisi'));
-			if ($this->form_validation->run() == FALSE)
-			{
-				$data['warung'] = $this->model_warung->tampil_data()->result();
-				$this->session->set_flashdata('gagal','<div class="alert alert-danger alert-dismissible" role="alert">
-				Data Gagal Diupdate 
-				<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-				</div>');
-				$data['title'] = 'Data Warung';
-				$this->load->view('templates_admin/header', $data);
-				$this->load->view('templates_admin/sidebar');
-				$this->load->view('admin/data_warung', $data);
-				$this->load->view('templates_admin/footer');	
-			}else{
 				$config ['upload_path'] = './uploads/warung';
 				$config ['allowed_types'] = 'jpg|jpeg|png|gif';
 				$config['remove_spaces'] = TRUE;
@@ -162,7 +125,6 @@
 					</div>');
 					redirect('admin/data_warung/index');
 				}
-			}
 		}
 
 		public function hapus($id_warung)

@@ -17,7 +17,7 @@
 		}
 		public function tambah_mitra($data,$table)
 		{
-			return $this->db->insert($table,$data);
+			$this->db->insert($table,$data);
 		} 
 	}
 ?>

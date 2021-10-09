@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 29, 2021 at 08:52 AM
+-- Generation Time: Oct 09, 2021 at 01:18 PM
 -- Server version: 10.3.15-MariaDB
 -- PHP Version: 7.3.6
 
@@ -40,28 +40,7 @@ CREATE TABLE `tb_admin` (
 --
 
 INSERT INTO `tb_admin` (`f_id`, `f_nama`, `f_username`, `f_password`) VALUES
-(1, 'admin', 'admin', '123456');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `tb_join`
---
-
-CREATE TABLE `tb_join` (
-  `f_id_join` int(11) NOT NULL,
-  `f_nama` varchar(50) NOT NULL,
-  `f_nama_warung` varchar(50) NOT NULL,
-  `f_alamat_warung` varchar(200) NOT NULL,
-  `f_no_telp_warung` varchar(15) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `tb_join`
---
-
-INSERT INTO `tb_join` (`f_id_join`, `f_nama`, `f_nama_warung`, `f_alamat_warung`, `f_no_telp_warung`) VALUES
-(1, 'zaki', 'warung zaki', 'jl gusdur', '085965856547');
+(1, 'admin', 'admin', '$2y$10$xGRvJ4egipdsXXaZDkr8EuaPFvYvGGGrk8fIK5a.eMf');
 
 -- --------------------------------------------------------
 
@@ -71,6 +50,7 @@ INSERT INTO `tb_join` (`f_id_join`, `f_nama`, `f_nama_warung`, `f_alamat_warung`
 
 CREATE TABLE `tb_makanan` (
   `f_id_makanan` int(11) NOT NULL,
+  `f_id_warung` int(11) NOT NULL,
   `f_nama_makanan` varchar(50) NOT NULL,
   `f_harga` int(15) NOT NULL,
   `f_nama_warung` varchar(50) NOT NULL,
@@ -81,25 +61,47 @@ CREATE TABLE `tb_makanan` (
 -- Dumping data for table `tb_makanan`
 --
 
-INSERT INTO `tb_makanan` (`f_id_makanan`, `f_nama_makanan`, `f_harga`, `f_nama_warung`, `f_gambar`) VALUES
-(1, 'Sate', 15000, 'Warung Bu Jus', 'sate_kambing1.jpg'),
-(14, 'Mie Ayam', 8000, 'Warung Bu Nad', 'mie_ayam.jpg'),
-(16, 'Soto', 15000, 'Warung Mantap', 'soto2.jpg'),
-(17, 'Mie Goreng', 10000, 'Warung Bu Nad', 'mie_goreng.jpg'),
-(18, 'Kare', 15000, 'Warung Bu Jus', 'kare1.jpg'),
-(19, 'Sate', 15000, 'Warung Bu Nad', 'sate_kambing2.jpg'),
-(21, 'Soto', 15000, 'Warung Mantap', 'soto3.jpg'),
-(22, 'Mie Ayam', 8000, 'Warung Bu Jus', 'mie_ayam2.jpg'),
-(23, 'Kare', 25000, 'Warung Bu Nad', 'kare2.jpg'),
-(25, 'Sate', 15000, 'Warung Bu Nad', 'sate_kambing3.jpg'),
-(26, 'Sate', 15555, 'Warung Mantap', 'sate_kambing4.jpg'),
-(27, 'Soto', 5000, 'Warung Bu Jus', 'soto4.jpg'),
-(28, 'soto', 5000, 'Warung A', 'mie_ayam3.jpg'),
-(29, 'Gule', 20000, 'Warung A', 'mie_goreng2.jpg'),
-(31, 'Rawon', 25000, 'Warung A', '11.jpg'),
-(33, 'Rawon', 10000, 'Warung A', 'mie_goreng3.jpg'),
-(34, 'Gule', 1000, 'Warung A', 'mie goreng.jpg'),
-(35, 'Rawon', 12000, 'Warung A', 'mie_goreng4.jpg');
+INSERT INTO `tb_makanan` (`f_id_makanan`, `f_id_warung`, `f_nama_makanan`, `f_harga`, `f_nama_warung`, `f_gambar`) VALUES
+(1, 1, 'Soto', 5000, 'Warung Mantap', 'soto.jpg'),
+(2, 2, 'Sate', 10000, 'Warung Asrun', 'sate_kambing5.jpg');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tb_minuman`
+--
+
+CREATE TABLE `tb_minuman` (
+  `f_id_minuman` int(11) NOT NULL,
+  `f_id_warung` int(11) NOT NULL,
+  `f_nama_minuman` varchar(50) NOT NULL,
+  `f_harga` varchar(15) NOT NULL,
+  `f_nama_warung` varchar(50) NOT NULL,
+  `f_gambar` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tb_minuman`
+--
+
+INSERT INTO `tb_minuman` (`f_id_minuman`, `f_id_warung`, `f_nama_minuman`, `f_harga`, `f_nama_warung`, `f_gambar`) VALUES
+(1, 1, 'Kopi Hitam', '5000', 'Warung Mantap', 'kopi1.jpg');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tb_mitra`
+--
+
+CREATE TABLE `tb_mitra` (
+  `f_id_mitra` int(11) NOT NULL,
+  `f_nama_mitra` varchar(50) NOT NULL,
+  `f_nama_warung` varchar(50) NOT NULL,
+  `f_alamat_warung` varchar(200) NOT NULL,
+  `f_tanggal` datetime NOT NULL,
+  `f_no_telp_warung` varchar(15) NOT NULL,
+  `f_gambar` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -110,20 +112,14 @@ INSERT INTO `tb_makanan` (`f_id_makanan`, `f_nama_makanan`, `f_harga`, `f_nama_w
 CREATE TABLE `tb_pembeli` (
   `f_id_pembeli` int(11) NOT NULL,
   `f_id_makanan` int(11) NOT NULL,
+  `f_id_minuman` int(11) NOT NULL,
   `f_nama_pembeli` varchar(50) NOT NULL,
-  `f_tanggal` datetime NOT NULL,
   `f_alamat` varchar(200) NOT NULL,
+  `f_tanggal` datetime NOT NULL,
   `f_no_telp` varchar(15) NOT NULL,
   `f_jumlah_order` int(11) NOT NULL,
   `f_total_bayar` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `tb_pembeli`
---
-
-INSERT INTO `tb_pembeli` (`f_id_pembeli`, `f_id_makanan`, `f_nama_pembeli`, `f_tanggal`, `f_alamat`, `f_no_telp`, `f_jumlah_order`, `f_total_bayar`) VALUES
-(1, 21, 'dedy', '2021-08-29 10:47:24', 'palembang', '0859564524235', 2, 30000);
 
 -- --------------------------------------------------------
 
@@ -144,9 +140,9 @@ CREATE TABLE `tb_warung` (
 --
 
 INSERT INTO `tb_warung` (`f_id_warung`, `f_nama_warung`, `f_alamat`, `f_no_telp`, `f_gambar`) VALUES
-(1, 'Warung Bu Jus', 'utara makam gusdur', '6289519876676', 'warung2.jpg'),
-(2, 'Warung Bu Nad', 'Jl gusdur no.4', '6285101619574', 'warung3.jpg'),
-(3, 'Warung Mantap', 'Jl. Imam Bonjol No.5', '6285736453532', 'warung.jpg');
+(1, 'Warung Mantap', 'jl kenanga no.3', '6285755466161', 'warung.jpg'),
+(2, 'Warung Asrun', 'jl. gusdur no.22', '6285101619574', 'warung1.jpg'),
+(3, 'Warung Bu Jus', 'utara makam gusdurr', '6289519876677', 'warung2.jpg');
 
 --
 -- Indexes for dumped tables
@@ -159,22 +155,32 @@ ALTER TABLE `tb_admin`
   ADD PRIMARY KEY (`f_id`);
 
 --
--- Indexes for table `tb_join`
---
-ALTER TABLE `tb_join`
-  ADD PRIMARY KEY (`f_id_join`);
-
---
 -- Indexes for table `tb_makanan`
 --
 ALTER TABLE `tb_makanan`
-  ADD PRIMARY KEY (`f_id_makanan`);
+  ADD PRIMARY KEY (`f_id_makanan`),
+  ADD KEY `f_id_warung` (`f_id_warung`);
+
+--
+-- Indexes for table `tb_minuman`
+--
+ALTER TABLE `tb_minuman`
+  ADD PRIMARY KEY (`f_id_minuman`),
+  ADD KEY `f_id_warung` (`f_id_warung`);
+
+--
+-- Indexes for table `tb_mitra`
+--
+ALTER TABLE `tb_mitra`
+  ADD PRIMARY KEY (`f_id_mitra`);
 
 --
 -- Indexes for table `tb_pembeli`
 --
 ALTER TABLE `tb_pembeli`
-  ADD PRIMARY KEY (`f_id_pembeli`);
+  ADD PRIMARY KEY (`f_id_pembeli`),
+  ADD KEY `f_id_makanan` (`f_id_makanan`),
+  ADD KEY `f_id_minuman` (`f_id_minuman`);
 
 --
 -- Indexes for table `tb_warung`
@@ -190,31 +196,48 @@ ALTER TABLE `tb_warung`
 -- AUTO_INCREMENT for table `tb_admin`
 --
 ALTER TABLE `tb_admin`
-  MODIFY `f_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
--- AUTO_INCREMENT for table `tb_join`
---
-ALTER TABLE `tb_join`
-  MODIFY `f_id_join` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `f_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `tb_makanan`
 --
 ALTER TABLE `tb_makanan`
-  MODIFY `f_id_makanan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
+  MODIFY `f_id_makanan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `tb_minuman`
+--
+ALTER TABLE `tb_minuman`
+  MODIFY `f_id_minuman` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `tb_mitra`
+--
+ALTER TABLE `tb_mitra`
+  MODIFY `f_id_mitra` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `tb_pembeli`
 --
 ALTER TABLE `tb_pembeli`
-  MODIFY `f_id_pembeli` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `f_id_pembeli` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `tb_warung`
 --
 ALTER TABLE `tb_warung`
   MODIFY `f_id_warung` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `tb_pembeli`
+--
+ALTER TABLE `tb_pembeli`
+  ADD CONSTRAINT `tb_pembeli_ibfk_1` FOREIGN KEY (`f_id_makanan`) REFERENCES `tb_makanan` (`f_id_makanan`),
+  ADD CONSTRAINT `tb_pembeli_ibfk_2` FOREIGN KEY (`f_id_minuman`) REFERENCES `tb_minuman` (`f_id_minuman`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

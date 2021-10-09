@@ -19,27 +19,23 @@
             <?php endforeach; ?>
             <div class="form-group mt-2">
                 <label for="nama">Nama Pembeli</label>
-                <input type="text" id="nama" name="f_nama_pembeli" class="form-control">
-                <?php echo form_error('f_nama_pembeli', '<div class="text-danger small">', '</div>') ?>
+                <input type="text" id="nama" name="f_nama_pembeli" class="form-control" required>
             </div>
             <div class="form-group mt-2">
                 <label for="alamat">Alamat</label>
-                <input type="text" id="alamat" name="f_alamat" class="form-control">
-                <?php echo form_error('f_alamat', '<div class="text-danger small">', '</div>') ?>
+                <input type="text" id="alamat" name="f_alamat" class="form-control" required>
             </div>
             <div class="form-group mt-2">
                 <label for="telp">No. Telp</label>
-                <input type="text" id="telp" name="f_no_telp" class="form-control">
-                <?php echo form_error('f_no_telp', '<div class="text-danger small">', '</div>') ?>
+                <input type="text" id="telp" name="f_no_telp" class="form-control" required>
             </div>
             <div class="form-group mt-2">
                 <label for="jumlah">Jumlah Order</label>
-                <input type="number" id="jumlah" name="f_jumlah_order" class="form-control">
-                <?php echo form_error('f_jumlah_order', '<div class="text-danger small">', '</div>') ?>
+                <input type="number" id="jumlah" name="f_jumlah_order" class="form-control" required>
             </div>
             <div class="form-group mt-2">
                 <label for="total">Total Bayar</label>
-                <input type="number" id="total" name="f_total_bayar" class="form-control">
+                <input type="number" id="total" name="f_total_bayar" class="form-control" required>
             </div>
             <button type="submit" class="checkout btn btn-sm btn-primary mt-3">Checkout</button>
         </form>

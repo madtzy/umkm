@@ -92,7 +92,7 @@ a {
 
 .backgorund_logo{
 	position: relative;
-	background: var(--yellow-color);
+	background: var(--white-color);
 	width: 100%;
 	border-top-right-radius: 10px;
 	border-bottom-right-radius: 10px;
@@ -129,7 +129,7 @@ a {
 }
 
 .nav__link:hover {
-	background-color: var(--yellow-color);
+	background-color: rgb(22, 22, 22);
 	transition: .3s;
 }
 
@@ -140,10 +140,32 @@ a {
 .aksi{
 	margin-top: 305px;
 }
-.dropdown-item:hover {
-	background-color: var(--yellow-color) !important;
+
+.bg-dropdown{
+	background-color: rgb(22, 22, 22);
 }
 
+.dropdown-item:hover {
+	background-color:black !important;
+}
+
+/* Dashboard */
+.bg-menu{
+	background: transparent linear-gradient(270deg, #31f1f1 0%, #2b73df 100%) 0% 0% no-repeat padding-box;
+    opacity: 0.8;
+}
+.bg-warung{
+	background: transparent linear-gradient(270deg, #EEDD45 0%, #fe9823 100%) 0% 0% no-repeat padding-box;
+    opacity: 0.8;
+}
+.bg-riwayat{
+	background: transparent linear-gradient(270deg, #ade777 0%, #23fe40 100%) 0% 0% no-repeat padding-box;
+	opacity: 0.8;
+}
+.bg-mitra{
+	background: transparent linear-gradient(270deg, #e76969 0%, #ff2d08 100%) 0% 0% no-repeat padding-box;
+        opacity: 0.8;
+}
 /* body */
 .margin{
 	margin-top: 70px;

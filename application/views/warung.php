@@ -47,7 +47,7 @@
                     <div class="card-body text-center">
                         <h5 class="card-title"><?php echo $wrg->f_nama_warung ?></h5>
                         <?php echo anchor('warung/detail/' . $wrg->f_id_warung, '<div class="detail_wrg btn btn-sm btn-success me-2">Detail</div>') ?>
-                        <?php echo anchor('warung/masuk/' . $wrg->f_nama_warung, '<div class="masuk_wrg btn btn-sm btn-primary">Masuk</div>') ?>
+                        <?php echo anchor('warung/masuk/' . $wrg->f_id_warung, '<div class="masuk_wrg btn btn-sm btn-primary">Masuk</div>') ?>
                     </div>
                 </div>
             </div>

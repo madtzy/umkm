@@ -10,13 +10,7 @@
 						<div class="col-md-9">
 							<table class="table">
 								<tr>
-									<td>Id minuman</td>
-									<td>
-										<strong><?php echo $mnm->f_id_minuman ?></strong>
-									</td>
-								</tr>
-								<tr>
-									<td>Nama minuman</td>
+									<td>Nama Minuman</td>
 									<td>
 										<strong><?php echo $mnm->f_nama_minuman ?></strong>
 									</td>

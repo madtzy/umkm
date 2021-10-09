@@ -6,8 +6,8 @@
 			<tr>
 				<th>No</th>
 				<th>Nama Pembeli</th>
-				<th>Tanggal</th>
 				<th>Alamat</th>
+				<th>Tanggal</th>
 				<th>No. Telp</th>
 				<th>Jumlah Order</th>
 				<th>Total Bayar</th>
@@ -22,8 +22,8 @@
 				<tr>
 					<td><?php echo $no++; ?></td>
 					<td><?php echo $rwyt->f_nama_pembeli ?></td>
-					<td><?php echo $rwyt->f_tanggal ?></td>
 					<td><?php echo $rwyt->f_alamat ?></td>
+					<td><?php echo $rwyt->f_tanggal ?></td>
 					<td><?php echo $rwyt->f_no_telp ?></td>
 					<td><?php echo $rwyt->f_jumlah_order ?></td>
 					<td>Rp. <?php echo number_format($rwyt->f_total_bayar, 0, ',', '.'); ?></td>

@@ -56,25 +56,26 @@
 				<div class="modal-body">
 					<form action="<?php echo base_url() . 'admin/data_minuman/tambah_aksi' ?>" method="post" enctype="multipart/form-data">
 						<div class="form-group">
-							<label for="minuman">Nama Minuman</label>
-							<input type="text" id="minuman" name="f_nama_minuman" class="form-control">
+							<label for="warung">Id Warung</label>
+							<input type="text" id="warung" name="f_id_warung" class="form-control" required>
 						</div>
-						<?php echo form_error('f_nama_minuman', '<div class="text-danger small">', '</div>') ?>
+						<div class="form-group">
+							<label for="minuman">Nama Minuman</label>
+							<input type="text" id="minuman" name="f_nama_minuman" class="form-control" required>
+						</div>
 						<div class="form-group mt-2">
 							<label for="harga">Harga</label>
-							<input type="number" id="harga" name="f_harga" class="form-control">
+							<input type="number" id="harga" name="f_harga" class="form-control" required>
 						</div>
-						<?php echo form_error('f_harga', '<div class="text-danger small">', '</div>') ?>
 						<div class="form-group mt-2">
 							<label for="warung">Nama Warung</label>
-							<input type="text" id="warung" name="f_nama_warung" class="form-control">
+							<input type="text" id="warung" name="f_nama_warung" class="form-control" required>
 						</div>
-						<?php echo form_error('f_nama_warung', '<div class="text-danger small">', '</div>') ?>
 						<div class="form-group mt-2">
 							<label>Gambar</label>
-							<input type="file" name="f_gambar" class="form-control">
+							<input type="file" name="f_gambar" class="form-control" required>
+							<small class="text-danger">*Ukuran gambar maksimal 1 MB</small>
 						</div>
-						<?php echo form_error('f_gambar', '<div class="text-danger small">', '</div>') ?>
 				</div>
 				<div class="modal-footer">
 					<button type="submit" class="btn btn-primary">Simpan</button>

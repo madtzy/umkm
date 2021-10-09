@@ -21,7 +21,7 @@
                     <span class="nav__name fs-6"><i class="bx bx-food-menu nav__icon me-3" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Data Menu"></i>Data Menu</span>
                 </a>
                 <div id="collapse" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                    <div class="bg-dark py-2">
+                    <div class="bg-dropdown py-2">
                         <a class="dropdown-item text-white" href="<?php echo base_url('admin/data_makanan') ?>"><i class='bx bx-sm bxs-pizza ms-2 me-3'></i>Data Makanan</a>
                         <hr class="dropdown-divider">
                         <a class="dropdown-item text-white" href="<?php echo base_url('admin/data_minuman') ?>"><i class='bx bx-sm bxs-drink ms-2 me-3'></i>Data Minuman</a>

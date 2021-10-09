@@ -9,7 +9,7 @@
           <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 text-secondary" style="text-align: justify !important;">
             <div id="judul" class="fw-bold text-white mt-3 mb-3">Deskripsi</div>
             <div id="content">
-              <div class="text-secondary">UMKM merupakan Usaha Mikro Kecil dan Menengah, dapat di artikan sebuah bisnis yang dijalankan individu, rumah tangga, atau badan usaha kecil. Ada banyak jenis UMKM, salah satunya UMKM Makanan. UMKM Makanan ini merupakan wadah bagi penjual makanan yang sistem ordernya langsung lewat Whatsapp.</div>
+              <div class="text-secondary">UMKM merupakan Usaha Mikro Kecil dan Menengah, dapat di artikan sebuah bisnis yang dijalankan individu, rumah tangga, atau badan usaha kecil. Ada banyak jenis UMKM, salah satunya UMKM Makanan. UMKM Makanan ini merupakan wadah bagi pemilik warung yang sistem ordernya langsung lewat Whatsapp.</div>
             </div>
           </div>
           <div class="col-xl-2 offset-xl-1 col-lg-6 col-md-6 col-sm-12 text-secondary" style="text-align: justify !important;">

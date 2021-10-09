@@ -26,8 +26,7 @@
 					redirect('admin/auth/login');
 				}else{
 					$this->session->set_userdata('f_username',$auth->f_username);
-					redirect('admin/dashboard_admin');
-					
+					redirect('admin/dashboard_admin');	
 				}
 			}
 		}

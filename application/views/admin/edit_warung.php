@@ -6,15 +6,15 @@
 				<div class="for-group">
 					<label>Nama Warung</label>
 					<input type="hidden" name="f_id_warung" class="form-control" value="<?php echo $wrg->f_id_warung ?>">
-					<input type="text" name="f_nama_warung" class="form-control" value="<?php echo $wrg->f_nama_warung ?>">
+					<input type="text" name="f_nama_warung" class="form-control" value="<?php echo $wrg->f_nama_warung ?>" required>
 				</div>
 				<div class="for-group">
 					<label>Alamat</label>
-					<input type="text" name="f_alamat" class="form-control" value="<?php echo $wrg->f_alamat ?>">
+					<input type="text" name="f_alamat" class="form-control" value="<?php echo $wrg->f_alamat ?>" required>
 				</div>
 				<div class="for-group">
 					<label>No Telp</label>
-					<input type="number" name="f_no_telp" class="form-control" value="<?php echo $wrg->f_no_telp ?>">
+					<input type="number" name="f_no_telp" class="form-control" value="<?php echo $wrg->f_no_telp ?>" required>
 				</div>
 				<div class="for-group">
 					<label>Gambar</label>
@@ -25,11 +25,11 @@
 					<?php
 					}
 					?>
-					<input type="file" name="f_gambar" class="form-control" value="<?php echo $wrg->f_gambar ?>">
-					<small class="text-danger">*biarkan kosong jika tidak di ganti</small>
+					<input type="file" name="f_gambar" class="form-control" value="<?php echo $wrg->f_gambar ?>" required>
+					<small class="text-danger">*Ukuran gambar maksimal 1 MB</small>
 				</div>
 				<button type="submit" class="btn btn-primary btn-sm mt-3">Simpan</button>
-				<?php echo anchor('admin/data_warung/index/', '<div class="btn btn-sm btn-danger mt-3">Kembali</div>') ?>
+				<?php echo anchor('admin/data_warung/index/', '<div class="btn btn-sm btn-danger mt-3">Batal</div>') ?>
 			</form>
 		<?php endforeach; ?>
 	</div>

@@ -15,14 +15,14 @@
                             <div class="form-group">
                                 <div class="input-group">
                                     <div class="input-group-text"><i class="fas fa-user"></i></div>
-                                    <input type="text" class="form-control form-control-username" name="f_username" placeholder="Masukkan Username Anda"> <br>
+                                    <input type="text" class="form-control form-control-username" name="f_username" placeholder="Masukkan Username Anda" required>
                                 </div>
                                 <?php echo form_error('f_username', '<div class="text-danger small">','</div>'); ?>
                             </div>
                             <div class="form-group mt-3">
                                 <div class="input-group">
                                     <div class="input-group-text"><i class="fas fa-key"></i></div>
-                                    <input type="password" class="form-control form-control-password" name="f_password" placeholder="Masukkan Password Anda">
+                                    <input type="password" class="form-control form-control-password" name="f_password" placeholder="Masukkan Password Anda" required>
                                 </div>
                                 <?php echo form_error('f_password', '<div class="text-danger small">','</div>'); ?>
                             </div>

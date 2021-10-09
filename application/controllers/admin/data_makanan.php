@@ -24,25 +24,7 @@
 		}
 		public function tambah_aksi ()
 		{
-			$this->form_validation->set_rules('f_nama_makanan','Nama Makanan','required', array('required' => 'Nama Makanan Wajib diisi'));
-			$this->form_validation->set_rules('f_harga','Harga','required', array('required' => 'Harga wajib diisi'));
-			$this->form_validation->set_rules('f_nama_warung','Nama warung','required', array('required' => 'Nama Warung wajib diisi'));
-			if (empty($_FILES['f_gambar']['name'])){
-			$this->form_validation->set_rules('f_gambar','Gambar','required', array('required' => 'Gambar wajib diisi'));
-			}
-			if ($this->form_validation->run() == FALSE)
-			{
-				$data['makanan'] = $this->model_makanan->tampil_data()->result();
-				$this->session->set_flashdata('gagal_tambah','<div class="alert alert-danger alert-dismissible" role="alert">
-				Data Gagal Ditambahkan 
-				<button class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-				</div>');
-				$data['title'] = 'Data Menu Makanan';
-				$this->load->view('templates_admin/header', $data);
-				$this->load->view('templates_admin/sidebar');
-				$this->load->view('admin/data_makanan', $data);
-				$this->load->view('templates_admin/footer');
-			}else{
+				$id_warung		= $this->input->post('f_id_warung');
 				$nama_makanan 	= $this->input->post('f_nama_makanan');
 				$harga 			= $this->input->post('f_harga');
 				$nama_warung 	= $this->input->post('f_nama_warung');
@@ -60,6 +42,7 @@
 					}
 				}
 				$data = array (
+					'f_id_warung'		=>$id_warung,
 					'f_nama_makanan'	=>$nama_makanan,
 					'f_harga'			=>$harga,
 					'f_nama_warung'		=>$nama_warung,
@@ -73,7 +56,6 @@
 				<button class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 				</div>');
 				redirect('admin/data_makanan/index');
-				}
 		}
 
 		public function edit($id_makanan)
@@ -91,22 +73,6 @@
 
 		public function update()
 		{
-			$this->form_validation->set_rules('f_nama_makanan','Nama Makanan','required', array('required' => 'Nama Makanan Wajib diisi'));
-			$this->form_validation->set_rules('f_harga','Harga','required', array('required' => 'Harga wajib diisi'));
-			$this->form_validation->set_rules('f_nama_warung','Nama warung','required', array('required' => 'Nama Warung wajib diisi'));
-			if ($this->form_validation->run() == FALSE)
-			{
-				$data['makanan'] = $this->model_makanan->tampil_data()->result();
-				$this->session->set_flashdata('gagal_update','<div class="alert alert-danger alert-dismissible" role="alert">
-				Data Gagal Diupdate
-				<button class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-				</div>');
-				$data['title'] = 'Edit Menu Makanan';
-				$this->load->view('templates_admin/header', $data);
-				$this->load->view('templates_admin/sidebar');
-				$this->load->view('admin/data_makanan', $data);
-				$this->load->view('templates_admin/footer');
-			}else{
 				$config ['upload_path'] = './uploads/makanan';
 				$config ['allowed_types'] = 'jpg|jpeg|png|gif';
 				$config['remove_spaces'] = TRUE;
@@ -115,12 +81,14 @@
 
 				if(!$this->upload->do_upload('f_gambar')){
 					$id_makanan 	= $this->input->post('f_id_makanan');
+					$id_warung 		= $this->input->post('f_id_warung');
 					$nama_makanan 	= $this->input->post('f_nama_makanan');
 					$harga			= $this->input->post('f_harga');
 					$nama_warung    = $this->input->post('f_nama_warung');
 					
 					
 					$data = array (
+						'f_id_warung'		=>$id_warung,
 						'f_nama_makanan'	=>$nama_makanan,
 						'f_harga'			=>$harga,
 						'f_nama_warung'	    =>$nama_warung
@@ -139,12 +107,14 @@
 					redirect('admin/data_makanan/index');
 				}else{
 					$id_makanan 	= $this->input->post('f_id_makanan');
+					$id_warung 		= $this->input->post('f_id_warung');
 					$nama_makanan 	= $this->input->post('f_nama_makanan');
 					$harga			= $this->input->post('f_harga');
 					$nama_warung    = $this->input->post('f_nama_warung');
 					$gambar			= $this->upload->data('file_name');
 
 					$data = array (
+						'f_id_warung'		=>$id_warung,
 						'f_nama_makanan'	=>$nama_makanan,
 						'f_harga'			=>$harga,
 						'f_nama_warung'	    =>$nama_warung,
@@ -163,7 +133,6 @@
 					</div>');
 					redirect('admin/data_makanan/index');
 				}
-			}
 		}
 
 		public function hapus($id_makanan)

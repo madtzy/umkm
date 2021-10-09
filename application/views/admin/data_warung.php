@@ -57,24 +57,21 @@
 					<form action="<?php echo base_url() . 'admin/data_warung/tambah_aksi' ?>" method="post" enctype="multipart/form-data">
 						<div class="form-group">
 							<label for="warung">Nama Warung</label>
-							<input type="text" id="warung" name="f_nama_warung" class="form-control">
+							<input type="text" id="warung" name="f_nama_warung" class="form-control" required>
 						</div>
-						<?php echo form_error('f_nama_warung', '<div class="text-danger small">', '</div>') ?>
 						<div class="form-group mt-2">
 							<label for="alamat">Alamat</label>
-							<input type="text" id="alamat" name="f_alamat" class="form-control">
+							<input type="text" id="alamat" name="f_alamat" class="form-control" required>
 						</div>
-						<?php echo form_error('f_alamat', '<div class="text-danger small">', '</div>') ?>
 						<div class="form-group mt-2">
 							<label for="telp">No Telp</label>
-							<input type="number" id="telp" name="f_no_telp" class="form-control">
+							<input type="number" id="telp" name="f_no_telp" class="form-control" required>
 						</div>
-						<?php echo form_error('f_no_telp', '<div class="text-danger small">', '</div>') ?>
 						<div class="form-group mt-2">
 							<label>Gambar</label>
-							<input type="file" name="f_gambar" class="form-control">
+							<input type="file" name="f_gambar" class="form-control" required>
+							<small class="text-danger">*Ukuran gambar maksimal 1 MB</small>
 						</div>
-						<?php echo form_error('f_gambar', '<div class="text-danger small">', '</div>') ?>
 				</div>
 				<div class="modal-footer">
 					<button type="submit" class="btn btn-primary">Simpan</button>

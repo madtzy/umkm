@@ -4,7 +4,7 @@
                         <!-- Data Makanan -->
                         <div class="col-3">
                             <div class="card shadow py-2 card-dashboard">
-                                <div class="card-body bg-primary py-4">
+                                <div class="card-body bg-menu py-4">
                                     <div class="row align-items-center">
                                         <div class="col me-2">
                                             <div class="fw-bold text-dark text-uppercase mb-1">DATA MENU</div>
@@ -20,7 +20,7 @@
                         <!-- Data Warung -->
                         <div class="col-3">
                             <div class="card shadow py-2 card-dashboard">
-                                <div class="card-body bg-warning py-4">
+                                <div class="card-body bg-warung py-4">
                                     <div class="row align-items-center">
                                         <div class="col me-2">
                                             <div class="fw-bold text-dark text-uppercase mb-1">DATA WARUNG</div>
@@ -36,7 +36,7 @@
                         <!-- Data Riwayat -->
                         <div class="col-3">
                             <div class="card shadow py-2 card-dashboard">
-                                <div class="card-body bg-success py-4">
+                                <div class="card-body bg-riwayat py-4">
                                     <div class="row align-items-center">
                                         <div class="col me-2">
                                             <div class="fw-bold text-dark text-uppercase mb-1">DATA RIWAYAT</div>
@@ -52,7 +52,7 @@
                         <!-- Data Mitra -->
                         <div class="col-3">
                             <div class="card shadow py-2 card-dashboard">
-                                <div class="card-body bg-danger py-4">
+                                <div class="card-body bg-mitra py-4">
                                     <div class="row align-items-center">
                                         <div class="col me-2">
                                             <div class="fw-bold text-dark text-uppercase mb-1">DATA MITRA</div>

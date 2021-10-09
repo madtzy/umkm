@@ -23,13 +23,13 @@
 			$this->db->or_like('f_no_telp',$keyword);
 			return $this->db->get()->result();
 		}
-		public function ambil_makanan_warung($nama_warung)
+		public function ambil_makanan_warung($id_warung)
 		{
-			return $this->db->get_where("tb_makanan", array('f_nama_warung' => $nama_warung));
+			return $this->db->get_where("tb_makanan", array('f_id_warung' => $id_warung));
 		}
-		public function ambil_minuman_warung($nama_warung)
+		public function ambil_minuman_warung($id_Warung)
 		{
-			return $this->db->get_where("tb_minuman", array('f_nama_warung' => $nama_warung));
+			return $this->db->get_where("tb_minuman", array('f_id_Warung' => $id_Warung));
 		}
 	}
 ?>

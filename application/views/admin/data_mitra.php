@@ -8,7 +8,9 @@
 					<th>Nama Mitra</th>
 					<th>Nama Warung</th>
 					<th>Alamat Warung</th>
+					<th>Tanggal</th>
 					<th>No Telp Warung</th>
+					<th>Gambar</th>
 					<th class="text-center">Aksi</th>
 				</tr>
 			</thead>
@@ -22,7 +24,9 @@
 						<td><?php echo $gabung->f_nama_mitra ?></td>
 						<td><?php echo $gabung->f_nama_warung ?></td>
 						<td><?php echo $gabung->f_alamat_warung ?></td>
+						<td><?php echo $gabung->f_tanggal ?></td>
 						<td><?php echo $gabung->f_no_telp_warung ?></td>
+						<td><img src="<?php echo base_url() . '/uploads/mitra/' . $gabung->f_gambar ?>" style="width:150px"></td>
 						<td class="text-center">
 							<span data-bs-toggle="modal" data-bs-target="#hapus_mitra">
 								<button type="button" class="btn btn-sm btn-danger me-3" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Hapus"><i class="fa fa-trash text-white"></i></button>
